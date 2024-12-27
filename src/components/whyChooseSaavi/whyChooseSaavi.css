@@ -1,0 +1,61 @@
+
+  .whyChooseSaavi {
+    text-align: center;
+  }
+  
+  .whyChooseSaavi-header {
+    margin: 20px 0;
+  }
+  
+  .whyChooseSaavi-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .whyChooseSaavi-subtitle {
+    color: #777;
+    font-size: 1.5rem;
+    color:rgba(169, 41, 56, 1);
+  }
+  
+  .whyChooseSaavi-features {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .whyChooseSaavi-featureCard {
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .whyChooseSaavi-featureCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .whyChooseSaavi-featureImage {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .whyChooseSaavi-featureTitle {
+    color: #c3002f;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .whyChooseSaavi-featureDescription {
+    color: #555;
+    font-size: 1rem;
+  }
+  

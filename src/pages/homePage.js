@@ -6,7 +6,9 @@ import SearchForm from '../components/searchForm/searchForm';
 import CarouselComponent from '../components/carouselComponent/carouselComponent';
 import BookButton from "../components/bookButton/bookButton";
 import SaaviCards from "../components/saaviCards/saaviCards"
-import Footer from "../components/footer/footer"
+import Footer from "../components/footer/footer";
+import WhyChooseSaavi from '../components/whyChooseSaavi/whyChooseSaavi';
+import OurStory from '../components/ourStory/ourStory';
 
 
 const App = () => {
@@ -19,6 +21,11 @@ const App = () => {
         <CarouselComponent/>
         </div>
         <BookButton/>
+        <WhyChooseSaavi/>
+        <OurStory/>
+
+
+
         <SaaviCards/>
 
         <Footer/>
