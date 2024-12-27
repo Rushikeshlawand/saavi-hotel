@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "react-select";
-import { FaMapMarkerAlt, FaCalendarAlt, FaUser } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { Dropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./searchForm.css";
 
 const SearchForm = () => {
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  
   const locations = [
     { value: "new-york", label: "New York" },
     { value: "paris", label: "Paris" },
@@ -18,6 +22,10 @@ const SearchForm = () => {
     { value: "3-2", label: "3 guests, 2 rooms" },
   ];
 
+  const handleLocationChange = (selectedOption) => {
+    setSelectedLocation(selectedOption);
+  };
+
   return (
     <div className="search-form-container">
       <form className="search-form">
@@ -26,11 +34,26 @@ const SearchForm = () => {
           <label>Location</label>
           <div className="dropdown-wrapper">
             <FaMapMarkerAlt className="icon" />
-            <Select
-              options={locations}
-              placeholder="Find location"
-              className="custom-select"
-            />
+            <Dropdown>
+              <Dropdown.Toggle
+                variant="default"
+                id="location-dropdown"
+                className="btn dropdown-toggle bs-placeholder btn-default"
+              >
+                {selectedLocation ? selectedLocation.label : "Where to go?"}
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="dropdown-menu open">
+                {locations.map((location) => (
+                  <Dropdown.Item
+                    key={location.value}
+                    eventKey={location.value}
+                    onClick={() => handleLocationChange(location)}
+                  >
+                    {location.label}
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
         </div>
 
@@ -38,7 +61,6 @@ const SearchForm = () => {
         <div className="form-group">
           <label>Check-In</label>
           <div className="dropdown-wrapper">
-            <FaCalendarAlt className="icon" />
             <input type="date" className="date-picker" />
           </div>
         </div>
@@ -47,7 +69,6 @@ const SearchForm = () => {
         <div className="form-group">
           <label>Check-Out</label>
           <div className="dropdown-wrapper">
-            <FaCalendarAlt className="icon" />
             <input type="date" className="date-picker" />
           </div>
         </div>
@@ -56,10 +77,9 @@ const SearchForm = () => {
         <div className="form-group">
           <label>Guests and Room</label>
           <div className="dropdown-wrapper">
-            <FaUser className="icon" />
             <Select
               options={guestsRooms}
-              placeholder="2 guest, 1 room"
+              placeholder="2 guests, 1 room"
               className="custom-select"
             />
           </div>
