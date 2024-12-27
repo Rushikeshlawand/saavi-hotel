@@ -3,15 +3,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0.6rem;
-  background-color: rgba(116, 92, 92, 0.5); /* Semi-transparent background */
+  background-color: rgba(116, 92, 92, 0.5);
   border-radius: 30px;
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  z-index: 10; /* Ensure navbar appears above background */
-  position: absolute; /* Keep the navbar fixed at the top */
-  top: 30px; /* Adjust to create spacing from the top */
-  left: 50%; /* Align the navbar to the center horizontally */
-  transform: translateX(-50%); /* Offset by 50% to center it */
-  width: 90%; /* Ensure it spans the full width, adjust as needed */
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
 }
 
 
@@ -25,26 +25,56 @@
   display: flex;
   list-style: none;
   gap: 2.9rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-}
-
-.book-now {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 0.5rem 3rem;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+  font-weight: 600;
 }
 
 .logo img {
-  height: 50px;
-  /* Adjust the height as needed */
+  height: 60px;
   width: auto;
-  /* Maintain aspect ratio */
   display: block;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: rgb(213, 202, 202);
+  transition: width 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.book-now {
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-now:hover {
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.book-now:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.4);
 }
