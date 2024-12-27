@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.6rem;
+  background-color: rgba(116, 92, 92, 0.5); /* Semi-transparent background */
+  border-radius: 30px;
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  z-index: 10; /* Ensure navbar appears above background */
+  position: absolute; /* Keep the navbar fixed at the top */
+  top: 30px; /* Adjust to create spacing from the top */
+  left: 50%; /* Align the navbar to the center horizontally */
+  transform: translateX(-50%); /* Offset by 50% to center it */
+  width: 90%; /* Ensure it spans the full width, adjust as needed */
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.9rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.book-now {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 50px;
+  /* Adjust the height as needed */
+  width: auto;
+  /* Maintain aspect ratio */
+  display: block;
+}

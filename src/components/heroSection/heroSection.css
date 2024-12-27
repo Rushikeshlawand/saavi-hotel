@@ -1,0 +1,16 @@
+.hero-section {
+  background-image: url('../../assets/homepage.png');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-content h1 {
+  margin-top: 600px;
+  font-size: 5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}

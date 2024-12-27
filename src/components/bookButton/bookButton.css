@@ -1,0 +1,25 @@
+.background {
+    margin-top: 200px;
+    background-color: rgba(178, 18, 37, 1);
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Position images at left and right */
+    width: 100%; /* Ensure the container takes up the full width */
+    height: 300px; /* Set height of the container */
+  }
+  
+  .background-image {
+    height: 100%; /* Ensure the image takes up full height of its container */
+    width: auto; /* Maintain the image's aspect ratio */
+    margin-left: 20px; /* Optional: space between the left image and the container */
+  }
+  
+  .background-image2 {
+    height: 100%; /* Ensure the second image takes up full height */
+    width: auto; /* Maintain the second image's aspect ratio */
+    margin-right: 20px; /* Optional: space between the right image and the container */
+  }
+.book-button{
+    background-color: #000000;
+    color:white;
+}  

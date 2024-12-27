@@ -1,0 +1,72 @@
+.footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end; /* Align the items to the right */
+    width: 50%; /* Adjust this value if needed */
+}
+
+.footer-item {
+    display: flex;
+    
+    margin: 0.5rem 0;
+}
+
+.footer-item label {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Optional: Hover effect */
+}
