@@ -55,10 +55,8 @@ const SearchForm = () => {
   };
 
   const renderGuestLabel = () => {
-    if (adultCount === 0 && childCount === 0) {
-      return 'Guest'; // Default label
-    }
-    return `${adultCount} Adult${adultCount > 1 ? 's' : ''}, ${childCount} Child${childCount > 1 ? 'ren' : ''}`;
+    const totalGuests = adultCount + childCount;
+    return totalGuests === 0 ? 'Guest' : `${totalGuests} Guest${totalGuests > 1 ? 's' : ''}`;
   };
 
   return (
@@ -116,7 +114,7 @@ const SearchForm = () => {
 
         {/* Guests and Room Dropdown */}
         <div className="form-group" ref={guestsDropdownRef}>
-          <label>Guests and Room</label>
+          <label>Guests</label>
           <div className="dropdown-wrapper">
             <div
               className="dropdown-toggle"
