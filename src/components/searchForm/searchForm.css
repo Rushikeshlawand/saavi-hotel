@@ -7,7 +7,7 @@
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  max-width: 80%;
+  width: 80%;
   margin: 0 auto;
   /* Center the container */
 }
@@ -64,7 +64,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 112%;
   /* Match the dropdown to the container width */
   background-color: white;
   border: 1px solid #ccc;
@@ -108,7 +108,8 @@
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 1rem 2rem; /* Reduce the top and bottom padding */
+  padding: 1rem 2rem;
+  /* Reduce the top and bottom padding */
   font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -121,6 +122,26 @@
 
 .search-button:hover {
   background-color: #cb5c52;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.counter-btn {
+  background-color: #ccc;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.counter-btn:hover {
+  background-color: #bbb;
 }
 
 /* Media Query for Mobile Devices */

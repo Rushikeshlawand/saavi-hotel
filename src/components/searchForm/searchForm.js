@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './searchForm.css';
@@ -9,37 +9,63 @@ const SearchForm = () => {
   const [guestsDropdownVisible, setGuestsDropdownVisible] = useState(false);
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
-  const [selectedGuestOption, setSelectedGuestOption] = useState(null);
 
-  const locations = [
-    { value: 'new-york', label: 'New York' },
-    { value: 'paris', label: 'Paris' },
-    { value: 'tokyo', label: 'Tokyo' },
-    { value: 'sydney', label: 'Sydney' },
-  ];
+  const [adultCount, setAdultCount] = useState(0);
+  const [childCount, setChildCount] = useState(0);
 
-  const guestsRooms = [
-    { value: '1-1', label: '1 guest, 1 room' },
-    { value: '2-1', label: '2 guests, 1 room' },
-    { value: '2-2', label: '2 guests, 2 rooms' },
-    { value: '3-2', label: '3 guests, 2 rooms' },
-  ];
+  const locationDropdownRef = useRef(null);
+  const guestsDropdownRef = useRef(null);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        locationDropdownRef.current &&
+        !locationDropdownRef.current.contains(event.target)
+      ) {
+        setLocationDropdownVisible(false);
+      }
+      if (
+        guestsDropdownRef.current &&
+        !guestsDropdownRef.current.contains(event.target)
+      ) {
+        setGuestsDropdownVisible(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
     setLocationDropdownVisible(false);
   };
 
-  const handleGuestSelection = (option) => {
-    setSelectedGuestOption(option);
-    setGuestsDropdownVisible(false); // Close the dropdown after selection
+  const increaseCount = (type) => {
+    if (type === 'adult') setAdultCount(adultCount + 1);
+    if (type === 'child') setChildCount(childCount + 1);
+  };
+
+  const decreaseCount = (type) => {
+    if (type === 'adult' && adultCount > 0) setAdultCount(adultCount - 1);
+    if (type === 'child' && childCount > 0) setChildCount(childCount - 1);
+  };
+
+  const renderGuestLabel = () => {
+    if (adultCount === 0 && childCount === 0) {
+      return 'Guest'; // Default label
+    }
+    return `${adultCount} Adult${adultCount > 1 ? 's' : ''}, ${childCount} Child${childCount > 1 ? 'ren' : ''}`;
   };
 
   return (
     <div className="search-form-container">
       <form className="search-form">
         {/* Location Dropdown */}
-        <div className="form-group">
+        <div className="form-group" ref={locationDropdownRef}>
           <label>Location</label>
           <div className="dropdown-wrapper">
             <div
@@ -53,13 +79,13 @@ const SearchForm = () => {
                 locationDropdownVisible ? 'show' : ''
               }`}
             >
-              {locations.map((location) => (
+              {['New York', 'Paris', 'Tokyo', 'Sydney'].map((location) => (
                 <div
-                  key={location.value}
+                  key={location}
                   className="dropdown-item"
-                  onClick={() => handleLocationChange(location)}
+                  onClick={() => handleLocationChange({ label: location })}
                 >
-                  {location.label}
+                  {location}
                 </div>
               ))}
             </div>
@@ -89,31 +115,60 @@ const SearchForm = () => {
         </div>
 
         {/* Guests and Room Dropdown */}
-        <div className="form-group">
+        <div className="form-group" ref={guestsDropdownRef}>
           <label>Guests and Room</label>
           <div className="dropdown-wrapper">
             <div
               className="dropdown-toggle"
               onClick={() => setGuestsDropdownVisible(!guestsDropdownVisible)}
             >
-              {selectedGuestOption
-                ? selectedGuestOption.label
-                : 'Select guests and rooms'}
+              {renderGuestLabel()}
             </div>
             <div
               className={`dropdown-menu ${
                 guestsDropdownVisible ? 'show' : ''
               }`}
             >
-              {guestsRooms.map((option) => (
-                <div
-                  key={option.value}
-                  className="dropdown-item"
-                  onClick={() => handleGuestSelection(option)}
-                >
-                  {option.label}
+              <div className="dropdown-item">
+                <span>Adults</span>
+                <div className="counter-controls">
+                  <button
+                    type="button"
+                    className="counter-btn"
+                    onClick={() => decreaseCount('adult')}
+                  >
+                    -
+                  </button>
+                  <span>{adultCount}</span>
+                  <button
+                    type="button"
+                    className="counter-btn"
+                    onClick={() => increaseCount('adult')}
+                  >
+                    +
+                  </button>
                 </div>
-              ))}
+              </div>
+              <div className="dropdown-item">
+                <span>Children</span>
+                <div className="counter-controls">
+                  <button
+                    type="button"
+                    className="counter-btn"
+                    onClick={() => decreaseCount('child')}
+                  >
+                    -
+                  </button>
+                  <span>{childCount}</span>
+                  <button
+                    type="button"
+                    className="counter-btn"
+                    onClick={() => increaseCount('child')}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
