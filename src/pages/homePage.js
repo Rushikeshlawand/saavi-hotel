@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <Navbar />
       <HeroSection />
-      <SearchForm />
+      
       <div className='carousel'>
         <CarouselComponent />
       </div>
