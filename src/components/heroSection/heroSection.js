@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './heroSection.css'
+import SearchForm from "../searchForm/searchForm"
 
 const HeroSection = () => {
   const images = [
@@ -25,6 +26,9 @@ const HeroSection = () => {
     >
       <div className='hero-content'>
         <h1>Experience the Saavi Difference</h1>
+      </div>
+      <div className='searchform'>
+        <SearchForm/>
       </div>
     </section>
   )

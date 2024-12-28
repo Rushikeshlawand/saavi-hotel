@@ -2,11 +2,15 @@
 .search-form-container {
   display: flex;
   justify-content: center;
-  padding: 2rem;
-  background-color: #f9f9f9;
+  padding: 1rem;
+  background-color: #8c868482;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  max-width: 80%;
+  /* border: 2px solid rgb(238, 233, 233); */
+  margin-left: 10%;
+  z-index: 100%;
 }
 
 /* Main search form styling */
@@ -15,8 +19,6 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   width: 100%;
-  max-width: 1200px;
-
 }
 
 /* Form group styling */
@@ -32,13 +34,13 @@
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* Dropdown wrapper */
 .dropdown-wrapper {
   position: relative;
-
 }
 
 .dropdown-toggle {
@@ -51,13 +53,14 @@
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  color: black;
 }
 
 .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 115%;
+  width: 116%;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -86,7 +89,7 @@
 .date-picker {
   border: 1px solid #ccc;
   outline: none;
-  padding: 0.5rem;
+  padding: 1.1rem;
   border-radius: 5px;
   font-size: 0.9rem;
 }
@@ -101,10 +104,10 @@
   padding: 0.75rem 3rem;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 3.5%;
+  margin-top: 3.6%;
   transition: background-color 0.3s ease;
   box-shadow: 1px 5px 1px rgb(24, 24, 24);
-  margin-left: 2%;
+  margin-left: 1%;
 }
 
 .search-button:hover {

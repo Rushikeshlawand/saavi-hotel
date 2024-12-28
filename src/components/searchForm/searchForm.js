@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './searchForm.css';
 
 const SearchForm = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
-  const [selectedGuests, setSelectedGuests] = useState(null);
   const [locationDropdownVisible, setLocationDropdownVisible] = useState(false);
   const [guestsDropdownVisible, setGuestsDropdownVisible] = useState(false);
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
+  const [selectedGuestOption, setSelectedGuestOption] = useState(null);
 
   const locations = [
     { value: 'new-york', label: 'New York' },
@@ -26,9 +30,9 @@ const SearchForm = () => {
     setLocationDropdownVisible(false);
   };
 
-  const handleGuestsChange = (option) => {
-    setSelectedGuests(option);
-    setGuestsDropdownVisible(false);
+  const handleGuestSelection = (option) => {
+    setSelectedGuestOption(option);
+    setGuestsDropdownVisible(false); // Close the dropdown after selection
   };
 
   return (
@@ -45,7 +49,9 @@ const SearchForm = () => {
               {selectedLocation ? selectedLocation.label : 'Where to go?'}
             </div>
             <div
-              className={`dropdown-menu ${locationDropdownVisible ? 'show' : ''}`}
+              className={`dropdown-menu ${
+                locationDropdownVisible ? 'show' : ''
+              }`}
             >
               {locations.map((location) => (
                 <div
@@ -63,13 +69,23 @@ const SearchForm = () => {
         {/* Check-In Date Picker */}
         <div className="form-group">
           <label>Check-In</label>
-          <input type="date" className="date-picker" />
+          <DatePicker
+            selected={checkInDate}
+            onChange={(date) => setCheckInDate(date)}
+            className="date-picker"
+            placeholderText="Select Check-In Date"
+          />
         </div>
 
         {/* Check-Out Date Picker */}
         <div className="form-group">
           <label>Check-Out</label>
-          <input type="date" className="date-picker" />
+          <DatePicker
+            selected={checkOutDate}
+            onChange={(date) => setCheckOutDate(date)}
+            className="date-picker"
+            placeholderText="Select Check-Out Date"
+          />
         </div>
 
         {/* Guests and Room Dropdown */}
@@ -80,16 +96,20 @@ const SearchForm = () => {
               className="dropdown-toggle"
               onClick={() => setGuestsDropdownVisible(!guestsDropdownVisible)}
             >
-              {selectedGuests ? selectedGuests.label : 'Guests and Room'}
+              {selectedGuestOption
+                ? selectedGuestOption.label
+                : 'Select guests and rooms'}
             </div>
             <div
-              className={`dropdown-menu ${guestsDropdownVisible ? 'show' : ''}`}
+              className={`dropdown-menu ${
+                guestsDropdownVisible ? 'show' : ''
+              }`}
             >
               {guestsRooms.map((option) => (
                 <div
                   key={option.value}
                   className="dropdown-item"
-                  onClick={() => handleGuestsChange(option)}
+                  onClick={() => handleGuestSelection(option)}
                 >
                   {option.label}
                 </div>
