@@ -4,20 +4,37 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* This will space out the content */
+  justify-content: space-between;
   align-items: center;
   color: white;
+  padding: 0 10px; /* Adds some padding for small screens */
 }
 
 .hero-content {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem; /* Larger font size for desktop */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  padding-top: 20%; /* Adjust top padding to push the text further down */
+  padding-top: 20%; /* Adjust the top padding to push the text further down */
 }
 
 .searchform {
-  
   margin-bottom: 10%; 
-  width: 95%;/* Optional: To add some space from the bottom */
+  width: 95%;
+  display: flex;
+  justify-content: center; /* Centering the search form */
 }
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    font-size: 0.7rem; /* Smaller font size for tablets */
+    padding-top: 10%; 
+    margin-top: 23%;/* Less top padding on mobile devices */
+  }
+
+  .searchform {
+    margin-bottom: 8%;
+    width: 100%; /* Make search form width full */
+    padding: 0 20px; /* Optional: Adds some spacing on mobile */
+  }
+}
+
