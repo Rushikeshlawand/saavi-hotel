@@ -7,11 +7,17 @@
   border-radius: 30px;
   backdrop-filter: blur(10px);
   z-index: 10;
+  /* Ensure navbar appears above background */
   position: absolute;
+  /* Keep the navbar fixed at the top */
   top: 30px;
+  /* Adjust to create spacing from the top */
   left: 50%;
+  /* Align the navbar to the center horizontally */
   transform: translateX(-50%);
+  /* Offset by 50% to center it */
   width: 90%;
+  /* Ensure it spans the full width, adjust as needed */
 }
 
 
@@ -25,13 +31,37 @@
   display: flex;
   list-style: none;
   gap: 2.9rem;
-  font-weight: 700;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.book-now {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 10px 2px 5px rgb(140, 26, 26);
 }
 
 .logo img {
-  height: 60px;
+  height: 50px;
+  /* Adjust the height as needed */
   width: auto;
+  /* Maintain aspect ratio */
   display: block;
+}
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.9rem;
+  font-weight: 700;
 }
 
 .nav-links a {
@@ -39,7 +69,6 @@
   text-decoration: none;
   color: white;
   font-size: 1.1rem;
-
 }
 
 .nav-links a::after {
@@ -78,3 +107,5 @@
 .book-now:active {
   transform: translateY(1px) scale(0.98);
 }
+
+
