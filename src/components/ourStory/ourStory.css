@@ -38,15 +38,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 100px;
+  gap: 70px;
   flex-wrap: wrap;
-
-
 }
 
 .ourStory-text {
   flex: 1;
-  max-width: 600px;
+  max-width: 700px;
   margin-top: 5%;
   font-weight: 500;
 }
