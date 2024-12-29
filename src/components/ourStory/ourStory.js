@@ -2,7 +2,7 @@ import React from "react";
 import "./ourStory.css";
 import Ourstory from "../../assets/ourStory.png";
 
-const OurStory=()=> {
+const OurStory = () => {
   return (
     <div className="ourStory">
       {/* Header Section */}
@@ -38,15 +38,17 @@ const OurStory=()=> {
 
         {/* Image Section */}
         <div className="ourStory-imageContainer">
-          <img
-            src={Ourstory}
-            alt="Balcony View"
-            className="ourStory-image"
-          />
+          <div className="ourStory-imageWrapper">
+            <img
+              src={Ourstory}
+              alt="Balcony View"
+              className="ourStory-image"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default OurStory;

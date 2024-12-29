@@ -19,9 +19,11 @@ const App = () => {
       </div>
       <BookButton />
       <div className='whyChooseSaavi'>
-      <WhyChooseSaavi />
+        <WhyChooseSaavi />
       </div>
-      <OurStory />
+      <div className='ourstorypage'>
+        <OurStory />
+      </div>
       <SaaviCards />
       <Footer />
     </div>
