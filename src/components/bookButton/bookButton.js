@@ -4,6 +4,8 @@ import buildingDesign from '../../assets/bookNow/buildingBlock1.png'
 import buildingDesign2 from '../../assets/bookNow/buildingBlock2.png'
 import BoyImage from '../../assets/bookNow/boyImage.png'
 import GirlImage from '../../assets/bookNow/girlImage.png'
+import Salman1 from '../../assets/bookNow/salman1.png'
+import Salman2 from '../../assets/bookNow/salman2.png'
 
 const BookButton = () => {
   return (

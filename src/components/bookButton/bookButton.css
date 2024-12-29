@@ -1,6 +1,6 @@
 /* Background container */
 .background {
-  margin-top: 200px;
+  margin-top: 10%;
   background-color: rgba(178, 18, 37, 1);
   display: flex;
   align-items: center;
@@ -24,16 +24,18 @@
   width: auto;
   position: absolute;
   right: 1%;
-  
+
 }
 
 /* Boy image */
 .boy-image {
   position: absolute;
   left: 5%;
-  height: 100%; /* Adjust size */
+  height: 100%;
+  /* Adjust size */
   width: auto;
-  z-index: 2; /* Ensure it appears above the building design */
+  z-index: 2;
+  /* Ensure it appears above the building design */
 }
 
 /* Girl image */
@@ -41,9 +43,11 @@
   position: absolute;
   right: 5%;
   /* Adjust this value to control vertical positioning */
-  height: 100%; /* Adjust size */
+  height: 100%;
+  /* Adjust size */
   width: auto;
-  z-index: 2; /* Ensure it appears above the building design */
+  z-index: 2;
+  /* Ensure it appears above the building design */
 }
 
 /* Centered content */
@@ -51,18 +55,27 @@
   position: absolute;
   text-align: center;
   color: white;
-  z-index: 3; /* Ensure it appears above all background images */
+  z-index: 3;
+  /* Ensure it appears above all background images */
 }
 
 /* Book text styles */
 .bookText {
   font-size: 2rem;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add some shadow for better readability */
-  margin-bottom: 12%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add some shadow for better readability */
+  margin-bottom: 11%;
   letter-spacing: 0.3rem;
+  line-height: 1;
+  
+  
 }
 
+.bookText h4 {
+  color: rgba(178, 18, 37, 1); /* Inner text color */
+  -webkit-text-stroke: 1px rgb(223, 198, 198); /* Text border */
+}
 /* Button styles */
 .book-button {
   margin-bottom: 10%;
