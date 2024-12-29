@@ -1,61 +1,81 @@
+.whyChooseSaavi {
+  position: relative; /* Enables positioning for child elements */
+  text-align: center;
+  color: black;
+}
 
-  .whyChooseSaavi {
-    text-align: center;
-  }
-  
-  .whyChooseSaavi-header {
-    margin: 20px 0;
-  }
-  
-  .whyChooseSaavi-title {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .whyChooseSaavi-subtitle {
-    color: #777;
-    font-size: 1.5rem;
-    color:rgba(169, 41, 56, 1);
-  }
-  
-  .whyChooseSaavi-features {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  .whyChooseSaavi-featureCard {
-    background: white;
-    border: 2px solid #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .whyChooseSaavi-featureCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .whyChooseSaavi-featureImage {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .whyChooseSaavi-featureTitle {
-    color: #c3002f;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .whyChooseSaavi-featureDescription {
-    color: #555;
-    font-size: 1rem;
-  }
-  
+.whyChooseSaavi-header {
+  margin: 20px 0;
+}
+
+.whyChooseSaavi-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.whyChooseSaavi-subtitle {
+  font-size: 1.3rem;
+  color: rgba(169, 41, 56, 1);
+}
+
+.whyChooseSaavi-featureWrapper {
+  position: relative; /* Needed for absolute positioning of background */
+  padding-bottom: 50px; /* Adjust for background positioning */
+}
+
+.whyChooseSaavi-features {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.whyChooseSaavi-featureCard {
+  background: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0px -10px 0px rgb(157, 13, 13);
+  width: 25%;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 4%;
+}
+
+.whyChooseSaavi-featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.whyChooseSaavi-featureImage {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.whyChooseSaavi-featureTitle {
+  color: #c3002f;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.whyChooseSaavi-featureDescription {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Background Image */
+.whyChooseSaavi-featureWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* Height of the background image */
+  background-image: url("../../assets/whyChooseSaaviCard/whyChooseSaaviBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Pushes it behind the cards */
+}

@@ -18,7 +18,9 @@ const App = () => {
         <CarouselComponent />
       </div>
       <BookButton />
+      <div className='whyChooseSaavi'>
       <WhyChooseSaavi />
+      </div>
       <OurStory />
       <SaaviCards />
       <Footer />
