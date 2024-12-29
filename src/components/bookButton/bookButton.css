@@ -68,14 +68,17 @@
   margin-bottom: 11%;
   letter-spacing: 0.3rem;
   line-height: 1;
-  
-  
+
+
 }
 
 .bookText h4 {
-  color: rgba(178, 18, 37, 1); /* Inner text color */
-  -webkit-text-stroke: 1px rgb(223, 198, 198); /* Text border */
+  color: rgba(178, 18, 37, 1);
+  /* Inner text color */
+  -webkit-text-stroke: 1px rgb(223, 198, 198);
+  /* Text border */
 }
+
 /* Button styles */
 .book-button {
   margin-bottom: 10%;
