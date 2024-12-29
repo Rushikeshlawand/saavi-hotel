@@ -1,90 +1,99 @@
 .title {
-  text-align: left;
-  margin-left: 50px;
+  justify-content: center;
+  width: 90%;
+  margin-left: 5%;
   font-size: 2rem;
 }
 
 .carousel-container {
-  position: relative;
-  width: 100%;
-}
-
-.custom-navigation {
-  position: absolute;
-  top: 50%;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  z-index: 10;
-  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.custom-nav-button {
-  background-color: white;
-  color: black;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  z-index: 15; /* Ensure buttons are on top */
-}
-
-.custom-nav-button:hover {
-  background-color: black;
-  color: white;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: static; /* Use static positioning for Swiper's custom buttons */
+.saaviCard {
+  display: flex;
+  margin-top: 4%;
+  gap: 2rem;
+  overflow: hidden;
+  width: 100%;
 }
 
 .card {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(57, 20, 20, 0.1);
-  border: 1px solid rgba(140, 125, 125, 0.47);
-  padding: 4px;
-}
-
-.card-image {
-  width: 80%; /* Adjusted for full width */
-  height: auto;
-  border-radius: 8px;
-}
-
-.card-body {
-  text-align: center;
-  padding: 0.5rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap; /* Prevents the elements from wrapping */
-  gap: 0.5rem; /* Optional: Adds spacing between title, rating, and reviews */
-}
-
-.card-title {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.card-rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid rgb(188, 181, 181);
+  padding: 1rem;
+  border-radius: 20px;
   font-size: 1rem;
+  width: 30%;
+  /* Each card takes 30% of the visible width */
+  height: auto;
+  text-align: left;
+  
+}
+
+/* Center the image in the parent div */
+.card img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Info container */
+.card .info {
+  margin-top: 0.5rem;
+}
+
+.card .info .title-with-rating {
+  display: flex;
+  align-items: center;
   gap: 0.5rem;
+  font-size: 1rem;
+  flex-wrap: nowrap;
 }
 
-.star-icon {
-  color: gold;
-  margin-right: 0.5rem;
+.card .info .title-with-rating .star {
+  color: #f4c542;
+  font-size: 1.2rem;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  z-index: 15; /* Ensure navigation buttons are on top */
+.card .info .title-with-rating .rating {
+  color: black;
+}
+
+.card .info .title-with-rating .reviews {
+  color: black;
+  font-size: 0.9rem;
+}
+
+/* Carousel buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
