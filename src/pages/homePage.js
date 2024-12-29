@@ -8,6 +8,7 @@ import SaaviCards from '../components/saaviCards/saaviCards'
 import Footer from '../components/footer/footer'
 import WhyChooseSaavi from '../components/whyChooseSaavi/whyChooseSaavi'
 import OurStory from '../components/ourStory/ourStory'
+import ExperienceUnforgettable from "../../src/components/experienceUnforgettable/experienceUnforgettable"
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
       </div>
       <div className='ourstorypage'>
         <OurStory />
+      </div>
+      <div className="ExperienceUnforgettable">
+      <ExperienceUnforgettable />
       </div>
       <SaaviCards />
       <Footer />
