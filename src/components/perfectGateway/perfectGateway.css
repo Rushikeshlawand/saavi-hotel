@@ -29,7 +29,6 @@
 }
 
 /* Image Card */
-/* Image Card */
 .perfectGateway-card-image {
   background-color: white;
   border-radius: 10px;
@@ -37,20 +36,15 @@
   position: relative;
   overflow: hidden;
   width: 35%;
-  /* You can adjust this value to increase/decrease the width */
   height: 10%;
-  /* Set the desired height for the image card */
 }
 
 .perfectGateway-card-image img {
   width: 100%;
   height: 100%;
-  /* This ensures the image fills the height of the card */
   object-fit: contain;
-  /* Ensures the image covers the area without distortion */
   border-radius: 10px 10px 0 0;
 }
-
 
 .perfectGateway-card-title {
   margin-top: 10px;
@@ -84,7 +78,6 @@
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  /* Ensure text is visible on top of the image */
   width: 20%;
 }
 
@@ -93,20 +86,16 @@
   padding: 20px;
   border-radius: 10px;
   text-align: left;
-
 }
 
 .perfectGateway-luxury-room h2 {
   font-size: 1em;
-
   margin-bottom: 10px;
   color: #fff;
-  /* Ensure text is white */
 }
 
 .perfectGateway-luxury-room p {
   color: #fff;
-  /* Ensure text is white */
   line-height: 1.6;
 }
 
@@ -118,7 +107,7 @@
   border-radius: 15px;
   text-align: left;
   background-color: white;
-  box-shadow: 0px 6px 1px rgba(178, 18, 37, 1);;
+  box-shadow: 0px 6px 1px rgba(178, 18, 37, 1);
 }
 
 .perfectGateway-easy-accessInner {
@@ -137,22 +126,13 @@
   color: #777;
 }
 
-.perfectGateway-tasty-foods img {
-  border-radius: 10px;
+.TastyFoods {
+  margin-top: 3%;
+  width: 25%;
 }
 
-.perfectGateway-culinary-delights {
-  text-align: left;
-}
-
-.perfectGateway-culinary-delights h2 {
-  font-size: 1.5em;
-  color: #b71c1c;
-}
-
-.perfectGateway-culinary-delights p {
-  color: #555;
-  line-height: 1.6;
+.luxuaryRoom {
+  height: 15%;
 }
 
 .perfectGateway-card-type4 {
@@ -181,10 +161,49 @@
   color: #777;
 }
 
-.TastyFoods {
-  margin-top: 3%;
-  width: 25%;
+
+
+
+
+
+
+
+
+
+.perfectGateway-content-wrapper {
+  overflow: hidden;
+  /* Hide overflow to create a scrolling effect */
+  width: 100%;
 }
-.luxuaryRoom{
-  height: 20%;
+
+.perfectGateway-content {
+  display: flex;
+  flex-wrap: wrap;
+  /* Prevent cards from wrapping to a new line */
+  gap: 20px;
+  /* Space between cards */
+  animation: scroll-left 30s linear infinite;
+  /* Add scrolling animation */
+}
+
+.perfectGateway-card-image,
+.perfectGateway-card-text,
+.perfectGateway-luxury-room,
+.perfectGateway-easy-access,
+.perfectGateway-card-type4 {
+  flex: 0 0 auto;
+  /* Prevent cards from shrinking or stretching */
+  width: 300px;
+  /* Fixed width for each card */
+}
+
+/* Scrolling Animation */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
