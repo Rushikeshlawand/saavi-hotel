@@ -4,32 +4,32 @@ import 'react-datepicker/dist/react-datepicker.css';
 import './searchForm.css';
 
 const SearchForm = () => {
-  const [selectedLocation, setSelectedLocation] = useState(null);
-  const [locationDropdownVisible, setLocationDropdownVisible] = useState(false);
-  const [guestsDropdownVisible, setGuestsDropdownVisible] = useState(false);
-  const [checkInDate, setCheckInDate] = useState(null);
-  const [checkOutDate, setCheckOutDate] = useState(null);
+  const [selectedDestination, setSelectedDestination] = useState(null);
+  const [destinationDropdownVisible, setDestinationDropdownVisible] = useState(false);
+  const [peopleDropdownVisible, setPeopleDropdownVisible] = useState(false);
+  const [arrivalDate, setArrivalDate] = useState(null);
+  const [departureDate, setDepartureDate] = useState(null);
 
-  const [adultCount, setAdultCount] = useState(0);
-  const [childCount, setChildCount] = useState(0);
+  const [adultNumber, setAdultNumber] = useState(0);
+  const [childNumber, setChildNumber] = useState(0);
 
-  const locationDropdownRef = useRef(null);
-  const guestsDropdownRef = useRef(null);
+  const destinationDropdownRef = useRef(null);
+  const peopleDropdownRef = useRef(null);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        locationDropdownRef.current &&
-        !locationDropdownRef.current.contains(event.target)
+        destinationDropdownRef.current &&
+        !destinationDropdownRef.current.contains(event.target)
       ) {
-        setLocationDropdownVisible(false);
+        setDestinationDropdownVisible(false);
       }
       if (
-        guestsDropdownRef.current &&
-        !guestsDropdownRef.current.contains(event.target)
+        peopleDropdownRef.current &&
+        !peopleDropdownRef.current.contains(event.target)
       ) {
-        setGuestsDropdownVisible(false);
+        setPeopleDropdownVisible(false);
       }
     };
 
@@ -39,92 +39,92 @@ const SearchForm = () => {
     };
   }, []);
 
-  const handleLocationChange = (location) => {
-    setSelectedLocation(location);
-    setLocationDropdownVisible(false);
+  const handleDestinationChange = (destination) => {
+    setSelectedDestination(destination);
+    setDestinationDropdownVisible(false);
   };
 
   const increaseCount = (type) => {
-    if (type === 'adult') setAdultCount(adultCount + 1);
-    if (type === 'child') setChildCount(childCount + 1);
+    if (type === 'adult') setAdultNumber(adultNumber + 1);
+    if (type === 'child') setChildNumber(childNumber + 1);
   };
 
   const decreaseCount = (type) => {
-    if (type === 'adult' && adultCount > 0) setAdultCount(adultCount - 1);
-    if (type === 'child' && childCount > 0) setChildCount(childCount - 1);
+    if (type === 'adult' && adultNumber > 0) setAdultNumber(adultNumber - 1);
+    if (type === 'child' && childNumber > 0) setChildNumber(childNumber - 1);
   };
 
-  const renderGuestLabel = () => {
-    const totalGuests = adultCount + childCount;
-    return totalGuests === 0 ? 'Guest' : `${totalGuests} Guest${totalGuests > 1 ? 's' : ''}`;
+  const renderPeopleLabel = () => {
+    const totalPeople = adultNumber + childNumber;
+    return totalPeople === 0 ? 'People' : `${totalPeople} People${totalPeople > 1 ? 's' : ''}`;
   };
 
   return (
     <div className="search-form-container">
       <form className="search-form">
-        {/* Location Dropdown */}
-        <div className="form-group" ref={locationDropdownRef}>
-          <label>Location</label>
+        {/* Destination Dropdown */}
+        <div className="form-group" ref={destinationDropdownRef}>
+          <label>Destination</label>
           <div className="dropdown-wrapper">
             <div
               className="dropdown-toggle"
-              onClick={() => setLocationDropdownVisible(!locationDropdownVisible)}
+              onClick={() => setDestinationDropdownVisible(!destinationDropdownVisible)}
             >
-              {selectedLocation ? selectedLocation.label : 'Where to go?'}
+              {selectedDestination ? selectedDestination.label : 'Where to go?'}
             </div>
             <div
               className={`dropdown-menu ${
-                locationDropdownVisible ? 'show' : ''
+                destinationDropdownVisible ? 'show' : ''
               }`}
             >
-              {['New York', 'Paris', 'Tokyo', 'Sydney'].map((location) => (
+              {['New York', 'Paris', 'Tokyo', 'Sydney'].map((destination) => (
                 <div
-                  key={location}
+                  key={destination}
                   className="dropdown-item"
-                  onClick={() => handleLocationChange({ label: location })}
+                  onClick={() => handleDestinationChange({ label: destination })}
                 >
-                  {location}
+                  {destination}
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Check-In Date Picker */}
+        {/* Arrival Date Picker */}
         <div className="form-group">
-          <label>Check-In</label>
+          <label>Arrival</label>
           <DatePicker
-            selected={checkInDate}
-            onChange={(date) => setCheckInDate(date)}
+            selected={arrivalDate}
+            onChange={(date) => setArrivalDate(date)}
             className="date-picker"
-            placeholderText="Select Check-In Date"
+            placeholderText="Select Arrival Date"
           />
         </div>
 
-        {/* Check-Out Date Picker */}
+        {/* Departure Date Picker */}
         <div className="form-group">
-          <label>Check-Out</label>
+          <label>Departure</label>
           <DatePicker
-            selected={checkOutDate}
-            onChange={(date) => setCheckOutDate(date)}
+            selected={departureDate}
+            onChange={(date) => setDepartureDate(date)}
             className="date-picker"
-            placeholderText="Select Check-Out Date"
+            placeholderText="Select Departure Date"
           />
         </div>
 
-        {/* Guests and Room Dropdown */}
-        <div className="form-group" ref={guestsDropdownRef}>
-          <label>Guests</label>
+        {/* People Dropdown */}
+        <div className="form-group" ref={peopleDropdownRef}>
+          <label>People</label>
           <div className="dropdown-wrapper">
             <div
               className="dropdown-toggle"
-              onClick={() => setGuestsDropdownVisible(!guestsDropdownVisible)}
+              onClick={() => setPeopleDropdownVisible(!peopleDropdownVisible)}
             >
-              {renderGuestLabel()}
+              {renderPeopleLabel()}
             </div>
             <div
               className={`dropdown-menu ${
-                guestsDropdownVisible ? 'show' : ''
+                peopleDropdownVisible ? 'show' : ''
               }`}
             >
               <div className="dropdown-item">
@@ -137,7 +137,7 @@ const SearchForm = () => {
                   >
                     -
                   </button>
-                  <span>{adultCount}</span>
+                  <span>{adultNumber}</span>
                   <button
                     type="button"
                     className="counter-btn"
@@ -157,7 +157,7 @@ const SearchForm = () => {
                   >
                     -
                   </button>
-                  <span>{childCount}</span>
+                  <span>{childNumber}</span>
                   <button
                     type="button"
                     className="counter-btn"

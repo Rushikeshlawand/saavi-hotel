@@ -1,8 +1,15 @@
+.backgroundImg {
+  background-image: url("../../assets/backgroundImages/backgroundImage1.png");
+  border-radius: 1px;
+  border: 0.1px solid rgb(255, 255, 255);
+}
+
 .title {
   justify-content: center;
   width: 90%;
   margin-left: 5%;
   font-size: 2rem;
+  margin-top: 5%;
 }
 
 .carousel-container {
@@ -29,7 +36,7 @@
   /* Each card takes 30% of the visible width */
   height: auto;
   text-align: left;
-  
+
 }
 
 /* Center the image in the parent div */

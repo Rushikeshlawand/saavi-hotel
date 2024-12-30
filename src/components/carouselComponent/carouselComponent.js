@@ -58,7 +58,7 @@ const CarouselComponent = () => {
   }
 
   return (
-    <>
+    <div className='backgroundImg'>
       <div className='title'>
         <h2>Experience Saavi Hospitality</h2>
         <div className='carousel-container'>
@@ -86,7 +86,7 @@ const CarouselComponent = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

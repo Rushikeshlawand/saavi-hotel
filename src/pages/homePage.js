@@ -16,9 +16,9 @@ const App = () => {
     <div className='bg'>
       <Navbar />
       <HeroSection />
-      <div className='carousel'>
+      
         <CarouselComponent />
-      </div>
+      
       <BookButton />
       <div className='whyChooseSaavi'>
         <WhyChooseSaavi />
@@ -30,7 +30,7 @@ const App = () => {
       <div className='ExperienceUnforgettable'>
         <ExperienceUnforgettable />
       </div>
-      <SaaviCards />
+      {/* <SaaviCards /> */}
       <Footer />
     </div>
   )
