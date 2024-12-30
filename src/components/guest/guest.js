@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Profile1 from '../../assets/guest/profile1.png'
-import './Guest.css'
+import React, { useState } from 'react';
+import Profile1 from '../../assets/guest/profile1.png';
+import './Guest.css';
 
 const Guest = () => {
-  const [activeGroup, setActiveGroup] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const testimonials = [
     {
@@ -11,106 +11,102 @@ const Guest = () => {
       content:
         'Saavi Hotel Huda City Center exceeded all my expectations. The location was perfect, and the hotel itself was modern and stylish.',
       author: 'Ms. Priya Desai',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 2,
       content:
         'Amazing experience! The service was impeccable, and the staff went out of their way to ensure a comfortable stay.',
       author: 'Mr. Rahul Sharma',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 3,
       content:
         'The food at Saavi Hotel was beyond delicious. I would recommend this place to any foodie out there!',
       author: 'Ms. Aarti Patel',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 4,
       content:
         'A perfect getaway spot. The rooms were spacious and clean, and the atmosphere was relaxing.',
       author: 'Mr. Vishal Kapoor',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 5,
       content:
         'Unforgettable stay! The staff was warm, and the attention to detail was remarkable. Loved every moment.',
       author: 'Ms. Sneha Roy',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 6,
       content:
         'The location was ideal for exploring the city, and the hotel amenities were top-notch. Highly recommended!',
       author: 'Mr. Arjun Mehta',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 7,
       content:
         'From the cozy rooms to the delicious breakfast, everything was perfect. Will definitely return.',
       author: 'Ms. Kavita Nair',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 8,
       content:
         'Exceptional service and a truly luxurious experience. Felt like royalty throughout my stay.',
       author: 'Mr. Rohan Gupta',
-      image: Profile1
+      image: Profile1,
     },
     {
       id: 9,
       content:
         'The rooftop view was breathtaking! The ambiance made it a memorable stay for my family.',
       author: 'Ms. Shalini Singh',
-      image: Profile1
-    }
-  ]
-
-  const cardsPerGroup = 3 // Number of cards displayed per group
-  const totalGroups = Math.ceil(testimonials.length / cardsPerGroup)
+      image: Profile1,
+    },
+  ];
 
   const handlePrev = () => {
-    setActiveGroup(prevGroup =>
-      prevGroup === 0 ? totalGroups - 1 : prevGroup - 1
-    )
-  }
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
 
   const handleNext = () => {
-    setActiveGroup(prevGroup =>
-      prevGroup === totalGroups - 1 ? 0 : prevGroup + 1
-    )
-  }
+    setActiveIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const getVisibleCards = () => {
-    const startIndex = activeGroup * cardsPerGroup
-    return testimonials.slice(startIndex, startIndex + cardsPerGroup)
-  }
+    const visibleCards = [];
+    for (let i = 0; i < 3; i++) {
+      visibleCards.push(testimonials[(activeIndex + i) % testimonials.length]);
+    }
+    return visibleCards;
+  };
 
   return (
     <div className='guest-container'>
       {/* Header */}
       <header className='guest-header'>
         <h1 className='guest-header-title'>What Our Guests Say</h1>
-        <p className='guest-header-subtitle'>
-          Hear from our satisfied travelers
-        </p>
+        <p className='guest-header-subtitle'>Hear from our satisfied travelers</p>
       </header>
 
       {/* Testimonials Display */}
       <div className='guest-testimonials'>
-        <div
-          className='guest-cards-container'
-          style={{
-            transform: `translateX(-${activeGroup * (100 / totalGroups)}%)`
-          }}
-        >
-          {getVisibleCards().map(testimonial => (
-            <div key={testimonial.id} className='guest-card'>
+        <div className='guest-cards-container'>
+          {getVisibleCards().map((testimonial, index) => (
+            <div
+              key={testimonial.id}
+              className={`guest-card ${index === 0 ? 'active' : ''}`}
+            >
               <img
                 src={testimonial.image}
                 alt={`Author ${testimonial.id}`}
@@ -136,11 +132,11 @@ const Guest = () => {
           &#9664;
         </button>
         <div className='guest-dots'>
-          {Array.from({ length: totalGroups }).map((_, index) => (
+          {Array.from({ length: testimonials.length }).map((_, index) => (
             <span
               key={index}
-              onClick={() => setActiveGroup(index)}
-              className={`guest-dot ${index === activeGroup ? 'active' : ''}`}
+              onClick={() => setActiveIndex(index)}
+              className={`guest-dot ${index === activeIndex ? 'active' : ''}`}
             ></span>
           ))}
         </div>
@@ -168,7 +164,7 @@ const Guest = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Guest
+export default Guest;
