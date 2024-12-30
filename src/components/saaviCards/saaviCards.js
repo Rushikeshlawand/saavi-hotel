@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
 import Card1 from '../../assets/guest/card1.png'
 import './saaviCards.css'
 
