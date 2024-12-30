@@ -1,0 +1,207 @@
+.guest-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.guest-header {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.guest-header h1 {
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+.guest-header p {
+    text-align: left;
+    font-size: 1rem;
+}
+
+.guest-header-title {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.guest-header-subtitle {
+    font-size: 16px;
+    color: rgba(169, 41, 56, 1);
+    margin-left: 20px;
+}
+
+.guest-testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.guest-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+    width: 90%;
+    height: 100%;
+}
+
+.guest-card {
+    flex: 1 1 calc(33.33% - 20px);
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.guest-card-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+}
+
+.guest-card-content {
+    margin: 70px 10px 20px;
+    font-size: 16px;
+}
+
+.guest-card-author {
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.guest-card-stars {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 2px;
+}
+
+.guest-star {
+    font-size: 16px;
+    color: #ffd700;
+    /* Gold color */
+}
+
+.guest-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.guest-nav-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.guest-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.guest-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.guest-dot.active {
+    background-color: red;
+}
+
+.guest-subscription {
+    position: relative;
+    top: 40px;
+    width: 100vw;
+    height: 150px;
+    border-radius: 24px;
+    border: 1px solid #ddd;
+    background-color: #b21225;
+
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guest-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(178, 18, 37, 0.8);
+    border-radius: 24px;
+}
+
+.guest-subscription-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.guest-subscription-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+.guest-subscription-text {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.guest-subscription-form {
+    position: absolute;
+    right: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.guest-input {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+    background-color: white;
+    color: black;
+}
+
+.guest-button {
+    padding: 10px 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
