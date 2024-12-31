@@ -4,7 +4,9 @@ import {
   FaTwitter,
   FaLinkedin,
   FaYoutube,
-  FaGoogle
+  FaGoogle,
+  FaInstagram,
+  FaPinterest
 } from 'react-icons/fa'
 import { FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
 import logo from '../../assets/logo.png'
@@ -82,8 +84,17 @@ const Footer = () => {
               target='_blank'
               rel='noopener noreferrer'
             >
+              <FaInstagram className='social-icon' />
+            </a>
+            <a
+              href='https://instagram.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <FaGoogle className='social-icon' />
             </a>
+            <FaPinterest className='social-icon' />
+            
           </div>
         </div>
       </div>
