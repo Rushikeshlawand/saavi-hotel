@@ -56,7 +56,7 @@ const SearchForm = () => {
 
   const renderPeopleLabel = () => {
     const totalPeople = adultNumber + childNumber;
-    return totalPeople === 0 ? 'People' : `${totalPeople} People${totalPeople > 1 ? 's' : ''}`;
+    return totalPeople === 0 ? 'Guest' : `${totalPeople} Guest${totalPeople > 1 ? 's' : ''}`;
   };
 
   return (
@@ -114,7 +114,7 @@ const SearchForm = () => {
 
         {/* People Dropdown */}
         <div className="form-group" ref={peopleDropdownRef}>
-          <label>People</label>
+          <label>Guest</label>
           <div className="dropdown-wrapper">
             <div
               className="dropdown-toggle"

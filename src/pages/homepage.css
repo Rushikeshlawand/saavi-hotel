@@ -1,5 +1,14 @@
-
-.temp{
+.temp {
     background-image: url("../assets/backgroundImages/backgroundImage2.png");
+
+}
+
+body {
+    font-family: Quicksand, sans-serif !important;
+}
+
+* {
+
+    font-family: Quicksand, sans-serif !important;
 
 }
