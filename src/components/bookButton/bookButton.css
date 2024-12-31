@@ -1,4 +1,11 @@
 /* Background container */
+.forEmptyspace{
+  background-image: url("../../assets/backgroundImages/backgroundImage1.png");
+border: 1px solid rgb(255, 255, 255);
+}
+
+
+
 .background {
   margin-top: 10%;
   background-color: rgba(178, 18, 37, 1);
@@ -9,6 +16,7 @@
   width: 100%;
   height: 420px;
   overflow: hidden;
+  
 }
 
 /* Left and right building images */

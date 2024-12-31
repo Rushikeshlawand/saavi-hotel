@@ -4,9 +4,9 @@ import SearchForm from "../searchForm/searchForm"
 
 const HeroSection = () => {
   const images = [
-    require('../../assets/homepage/homepage4.png'),
-    require('../../assets/homepage/homapage7.png'),
-    require('../../assets/homepage/homepage6.png')
+    require('../../assets/homepage/1.png'),
+    require('../../assets/homepage/2.png'),
+    require('../../assets/homepage/3.png')
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0)

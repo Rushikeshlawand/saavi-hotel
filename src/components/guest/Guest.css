@@ -1,11 +1,14 @@
 .guest-container {
     width: 100%;
+  background-image: url("../../assets/backgroundImages/backgroundImage2.png");
+border: 0.1px solid white;
     
     box-sizing: border-box;
-    margin-top: 4%;
 }
 
 .guest-header {
+    margin-top: 4%;
+
     text-align: left;
     margin-bottom: 4%;
     margin-left: 5%;

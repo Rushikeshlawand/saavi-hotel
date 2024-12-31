@@ -4,6 +4,7 @@ import image from '../../assets/adventure/adventureImage.png'
 
 const ExperienceUnforgettable = () => {
   return (
+    <div className='forbackground'>
     <div className='adventure-container'>
       <div className='header-section'>
         <h1>Experience Unforgettable</h1>
@@ -13,6 +14,7 @@ const ExperienceUnforgettable = () => {
         <div className='overlay'>
           <h2>ADVENTURES</h2>
           <button className='explore-button'>Explore</button>
+        </div>
         </div>
       </div>
     </div>

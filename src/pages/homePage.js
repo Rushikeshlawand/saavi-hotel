@@ -12,28 +12,29 @@ import ExperienceUnforgettable from '../../src/components/experienceUnforgettabl
 import Guest from '../../src/components/guest/guest'
 import SaaviCards from '../components/saaviCards/saaviCards'
 
-
 const App = () => {
   return (
     <div className='bg'>
       <Navbar />
       <HeroSection />
-      
-        <CarouselComponent />
-      
+
+      <CarouselComponent />
+
       <BookButton />
       <div className='whyChooseSaavi'>
         <WhyChooseSaavi />
       </div>
       <div className='ourstorypage'>
-        <OurStory />
+        <div className='temp'>
+          <OurStory />
+        </div>
+        <PerfectGateway />
+        <div className='ExperienceUnforgettable'>
+          <ExperienceUnforgettable />
+        </div>
+        <Guest />
+        <SaaviCards />
       </div>
-      <PerfectGateway />
-      <div className='ExperienceUnforgettable'>
-        <ExperienceUnforgettable />
-      </div>
-      <Guest/>
-      <SaaviCards />
       <Footer />
     </div>
   )

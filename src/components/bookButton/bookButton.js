@@ -21,6 +21,7 @@ const BookButton = () => {
   }, []);
 
   return (
+    <div className='forEmptyspace'>
     <div className='background'>
       <img
         src={buildingDesign}
@@ -58,6 +59,7 @@ const BookButton = () => {
           <button className='book-now-btn'>Book Now</button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
