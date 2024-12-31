@@ -89,14 +89,14 @@ function PerfectGateway () {
               </p>
             </div>
           </div>
-          <div className='perfectGateway-card-image luxuaryRoom'>
+          {/* <div className='perfectGateway-card-image luxuaryRoom'>
             <img
               src={LuxuaryRoom}
               alt='Luxuary Room'
               className='perfectGateway-card-image'
             />
             <div className='perfectGateway-card-title'>Luxuary Room</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
