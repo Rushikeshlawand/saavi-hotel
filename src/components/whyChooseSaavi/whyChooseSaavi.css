@@ -2,6 +2,7 @@
   position: relative; /* Enables positioning for child elements */
   text-align: center;
   color: black;
+  margin-top: 7%;
 }
 
 .whyChooseSaavi-header {

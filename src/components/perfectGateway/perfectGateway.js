@@ -5,7 +5,7 @@ import TastyFood from '../../assets/perfectGateway/tastyFood.png'
 import LuxuaryRoom from '../../assets/perfectGateway/luxuaryRoom.png'
 function PerfectGateway () {
   return (
-    <div className='forBackground'>
+    
     <div className='perfectGateway-container'>
       <header className='perfectGateway-header'>
         <h1>Your Perfect Getaway</h1>
@@ -100,7 +100,7 @@ function PerfectGateway () {
         </div>
       </div>
     </div>
-    </div>
+    
   )
 }
 

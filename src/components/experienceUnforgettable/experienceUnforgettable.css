@@ -1,13 +1,8 @@
-.forbackground {
-  background-image: url("../../assets/backgroundImages/backgroundImage2.png");
-  border: 0.1 solid white;
-
-}
-
 .adventure-container {
   width: 100%;
   text-align: center;
   color: #333;
+  margin-top: 7%;
 }
 
 .header-section {

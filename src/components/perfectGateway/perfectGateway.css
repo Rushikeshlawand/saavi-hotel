@@ -1,15 +1,8 @@
-.forBackground {
-  background-image: url("../../assets/backgroundImages/backgroundImage2.png");
-  border: 1px solid white;
-}
-
-
-
 .perfectGateway-container {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .perfectGateway-header {

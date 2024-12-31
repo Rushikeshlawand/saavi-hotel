@@ -27,12 +27,14 @@ const App = () => {
       <div className='ourstorypage'>
         <div className='temp'>
           <OurStory />
+          <PerfectGateway />
+
+          <div className='ExperienceUnforgettable'>
+            <ExperienceUnforgettable />
+          </div>
+          <Guest />
         </div>
-        <PerfectGateway />
-        <div className='ExperienceUnforgettable'>
-          <ExperienceUnforgettable />
-        </div>
-        <Guest />
+
         <SaaviCards />
       </div>
       <Footer />
