@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Card1 from '../../assets/guest/card1.png'
+import Frame from '../../assets/guest/frame.png'
 import './saaviCards.css'
 
 const SaaviCards = () => {
@@ -37,6 +38,7 @@ const SaaviCards = () => {
   ]
 
   return (
+    <>
     <div className='saavi-cards-container'>
       {/* Cards container */}
       <div
@@ -59,17 +61,19 @@ const SaaviCards = () => {
           </div>
         ))}
       </div>
+    </div>
+
 
       {/* Rectangle container below the cards */}
       <div
         className='saavi-rectangle-container'
         style={{
-          backgroundImage: `url(${Card1})`
+          backgroundImage: `url(${Frame})`
         }}
       >
         <div className='saavi-rectangle-overlay'></div>
       </div>
-    </div>
+      </>
   )
 }
 
