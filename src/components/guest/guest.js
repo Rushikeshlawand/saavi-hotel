@@ -147,22 +147,26 @@ const Guest = () => {
 
       {/* Subscription Section */}
       <div className='guest-subscription'>
-        <div className='guest-overlay'></div>
-        <div className='guest-subscription-content'>
-          <h2 className='guest-subscription-title'>Unlock Exclusive Offers</h2>
-          <p className='guest-subscription-text'>
-            Only the best deals reach your inbox.
-          </p>
-        </div>
-        <div className='guest-subscription-form'>
-          <input
-            type='email'
-            placeholder='Enter your email address'
-            className='guest-input'
-          />
-          <button className='guest-button'>Notify Me</button>
-        </div>
-      </div>
+  <div className='guest-overlay'></div>
+  <div className='guest-subscription-content'>
+    <h2 className='guest-subscription-title'>Unlock Exclusive Offers</h2>
+    <p className='guest-subscription-text'>
+      Only the best deals reach your inbox.
+    </p>
+  </div>
+  <div className='guest-subscription-form'>
+    <div className='guest-email-wrapper'>
+      <label className='guest-email-label'>Your Email</label>
+      <input
+        type='email'
+        placeholder='Enter your email address'
+        className='guest-input'
+      />
+    </div>
+    <button className='guest-button'>Notify Me</button>
+  </div>
+</div>
+
     </div>
   );
 };
