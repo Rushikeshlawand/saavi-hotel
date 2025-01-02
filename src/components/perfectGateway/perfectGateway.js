@@ -5,7 +5,6 @@ import TastyFood from '../../assets/perfectGateway/tastyFood.png'
 import LuxuaryRoom from '../../assets/perfectGateway/luxuaryRoom.png'
 function PerfectGateway () {
   return (
-    
     <div className='perfectGateway-container'>
       <header className='perfectGateway-header'>
         <h1>Your Perfect Getaway</h1>
@@ -71,15 +70,15 @@ function PerfectGateway () {
           </div>
 
           {/* Duplicate Cards */}
-          <div className='perfectGateway-card-image'>
+          {/* <div className='perfectGateway-card-image'>
             <img
               src={Nature}
               alt='Nature'
               className='perfectGateway-card-image'
             />
             <div className='perfectGateway-card-title'>Nature</div>
-          </div>
-          <div className='perfectGateway-card-text perfectGateway-luxury-room'>
+          </div> */}
+          {/* <div className='perfectGateway-card-text perfectGateway-luxury-room'>
             <div className='perfectGateway-card-content'>
               <h2>Cozy Comfort, Modern Convenience</h2>
               <p>
@@ -88,7 +87,7 @@ function PerfectGateway () {
                 great outdoors inside.
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <div className='perfectGateway-card-image luxuaryRoom'>
             <img
               src={LuxuaryRoom}
@@ -100,7 +99,6 @@ function PerfectGateway () {
         </div>
       </div>
     </div>
-    
   )
 }
 

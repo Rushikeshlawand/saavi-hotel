@@ -13,6 +13,7 @@
 .perfectGateway-header h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  margin-top: 1%;
 }
 
 .perfectGateway-header p {
@@ -20,15 +21,29 @@
   color: rgba(169, 41, 56, 1);
 }
 
+.perfectGateway-content-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
 .perfectGateway-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 1%;
+  gap: 20px;
   margin-top: 4%;
+  animation: scroll-left 30s linear infinite;
 }
 
-/* Image Card */
+.perfectGateway-card-image,
+.perfectGateway-card-text,
+.perfectGateway-luxury-room,
+.perfectGateway-easy-access,
+.perfectGateway-card-type4 {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
 .perfectGateway-card-image {
   background-color: white;
   border-radius: 10px;
@@ -61,7 +76,6 @@
   letter-spacing: 0.6rem;
 }
 
-/* Text Card */
 .perfectGateway-card-text {
   background-color: white;
   border-radius: 10px;
@@ -78,7 +92,8 @@
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  width: 20%;
+  width: 24%;
+
 }
 
 .perfectGateway-luxury-room .perfectGateway-card-content {
@@ -90,13 +105,14 @@
 
 .perfectGateway-luxury-room h2 {
   font-size: 1em;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   color: #fff;
+  margin-top: 7%;
 }
 
 .perfectGateway-luxury-room p {
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.1;
 }
 
 .perfectGateway-easy-access {
@@ -112,7 +128,7 @@
 
 .perfectGateway-easy-accessInner {
   border: 1px solid black;
-  padding: 3%;
+  padding: 6%;
   border-radius: 15px;
 }
 
@@ -137,18 +153,19 @@
 
 .perfectGateway-card-type4 {
   width: 25%;
-  border: 1px solid rgb(209, 208, 208);
-  border-radius: 10px;
+  border: 1px solid rgb(179, 172, 172);
+  border-radius: 15px;
   height: 15%;
   padding: 1%;
-  box-shadow: 0px 6px 1px rgba(178, 18, 37, 1);
 }
 
 .perfectGateway-card-type4-inner {
-  padding: 5%;
+  padding: 9%;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: left;
+  
+
 }
 
 .perfectGateway-card-type4-inner h2 {
@@ -159,42 +176,6 @@
 
 .perfectGateway-card-type4-inner p {
   color: #777;
-}
-
-
-
-
-
-
-
-
-
-
-.perfectGateway-content-wrapper {
-  overflow: hidden;
-  /* Hide overflow to create a scrolling effect */
-  width: 100%;
-}
-
-.perfectGateway-content {
-  display: flex;
-  flex-wrap: wrap;
-  /* Prevent cards from wrapping to a new line */
-  gap: 20px;
-  /* Space between cards */
-  animation: scroll-left 30s linear infinite;
-  /* Add scrolling animation */
-}
-
-.perfectGateway-card-image,
-.perfectGateway-card-text,
-.perfectGateway-luxury-room,
-.perfectGateway-easy-access,
-.perfectGateway-card-type4 {
-  flex: 0 0 auto;
-  /* Prevent cards from shrinking or stretching */
-  width: 300px;
-  /* Fixed width for each card */
 }
 
 /* Scrolling Animation */
