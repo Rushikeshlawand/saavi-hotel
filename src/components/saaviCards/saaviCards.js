@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import Card1 from '../../assets/guest/card1.png'
 import Frame from '../../assets/guest/frame.png'
+import Card1 from '../../assets/saavicard/card1.png'
+import Card2 from '../../assets/saavicard/carbon_building.png'
+import Card3 from '../../assets/saavicard/hugeicons_suit.png'
+
 import './saaviCards.css'
 
 const SaaviCards = () => {
@@ -27,13 +30,13 @@ const SaaviCards = () => {
       description:
         'Experience world-class hospitality for your business events and meetings.',
       link: 'Get in touch',
-      image: Card1
+      image: Card2
     },
     {
       title: 'Join Our Team',
       description: "Be part of a team that's redefining luxury hospitality.",
       link: 'Join us',
-      image: Card1
+      image: Card3
     }
   ]
 
