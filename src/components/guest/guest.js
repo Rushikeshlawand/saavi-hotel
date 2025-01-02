@@ -9,21 +9,21 @@ const Guest = () => {
     {
       id: 1,
       content:
-        'Saavi Hotel Huda City Center exceeded all my expectations. The location was perfect, and the hotel itself was modern and stylish.',
+        'Saavi Hotel Huda City Center exceeded all my expectations. The location was perfect.',
       author: 'Ms. Priya Desai',
       image: Profile1,
     },
     {
       id: 2,
       content:
-        'Amazing experience! The service was impeccable, and the staff went out of their way to ensure a comfortable stay.',
+        'The service was impeccable, & the staff went out of their way to ensure a comfortable stay.',
       author: 'Mr. Rahul Sharma',
       image: Profile1,
     },
     {
       id: 3,
       content:
-        'The food at Saavi Hotel was beyond delicious. I would recommend this place to any foodie out there!',
+        'The food at Saavi Hotel was beyond delicious. I would recommend this place to any foodie.',
       author: 'Ms. Aarti Patel',
       image: Profile1,
     },
@@ -37,14 +37,14 @@ const Guest = () => {
     {
       id: 5,
       content:
-        'Unforgettable stay! The staff was warm, and the attention to detail was remarkable. Loved every moment.',
+        'Unforgettable stay! The staff was warm, and the attention to detail was remarkable. .',
       author: 'Ms. Sneha Roy',
       image: Profile1,
     },
     {
       id: 6,
       content:
-        'The location was ideal for exploring the city, and the hotel amenities were top-notch. Highly recommended!',
+        'The location was ideal for exploring the city, and the hotel amenities were top-notch.',
       author: 'Mr. Arjun Mehta',
       image: Profile1,
     },
