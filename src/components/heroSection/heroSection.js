@@ -169,7 +169,7 @@ const HeroSectionWithSearch = () => {
           <div className='form-group'>
             <div className='dropdown-wrapper-guest'>
               <div
-                className='dropdown-toggle-guest'
+                className='dropdown-toggle'
                 onClick={() => setPeopleDropdownVisible(!peopleDropdownVisible)}
               >
                 {renderPeopleLabel()}

@@ -97,10 +97,13 @@
 
 }
 
+.dropdown-toggle-destination {
+  border-radius: 20px 0px 0px 20px;
+
+}
 .dropdown-toggle-destination,
 .dropdown-toggle {
   padding: 1rem;
-  border-radius: 20px 0px 0px 20px;
   background-color: #fff;
   border: 1px solid #ddd;
   cursor: pointer;
@@ -108,17 +111,14 @@
   font-size: 1rem;
 }
 
-.dropdown-toggle-destination,
-.dropdown-toggle-guest {
+.dropdown-toggleG {
   padding: 1rem;
-
   background-color: #fff;
   border: 1px solid #ddd;
   cursor: pointer;
   color: #333;
   font-size: 1rem;
 }
-
 .dropdown-menu {
   position: absolute;
   top: 100%;
