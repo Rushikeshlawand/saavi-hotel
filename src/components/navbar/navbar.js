@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './navbar.css'
-import logo from '../../assets/logo1.png'
+import logo from '../../assets/logo3.png'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,10 +12,10 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className={`logo ${menuOpen ? 'open' : ''}`}>
-        {/* <img src={logo} alt='Saavi Hotels Logo' /> */}
-        <h1>SAAVI</h1>
+        <img src={logo} alt='Saavi Hotels Logo' />
+        {/* <h1>SAAVI</h1> */}
         <div className='logotext'>
-          <labe>A Comfortable stay</labe>
+          <label>A Comfortable stay</label>
         </div>
       </div>
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>

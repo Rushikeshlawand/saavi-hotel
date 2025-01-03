@@ -7,7 +7,7 @@ import BookButton from '../components/bookButton/bookButton'
 import Footer from '../components/footer/footer'
 import WhyChooseSaavi from '../components/whyChooseSaavi/whyChooseSaavi'
 import OurStory from '../components/ourStory/ourStory'
-import PerfectGateway from '../components/perfectGateway/perfectGateway'
+import PerfectGateway from '../../src/components/perfectGateway/perfectGateway'
 import ExperienceUnforgettable from '../../src/components/experienceUnforgettable/experienceUnforgettable'
 import Guest from '../../src/components/guest/guest'
 import SaaviCards from '../components/saaviCards/saaviCards'
@@ -17,9 +17,7 @@ const App = () => {
     <div className='bg'>
       <Navbar />
       <HeroSection />
-
       <CarouselComponent />
-
       <BookButton />
       <div className='whyChooseSaavi'>
         <WhyChooseSaavi />
