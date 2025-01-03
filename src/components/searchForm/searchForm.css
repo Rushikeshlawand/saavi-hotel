@@ -1,51 +1,54 @@
 .search-form-container {
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
-  border-radius: 12px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
   width: 85%;
-  margin: 0 auto;
 }
 
 .search-form {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 0;
   width: 100%;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  position: relative;
-  padding: 0.75rem;
-  margin-left: 1.5rem;
-}
-
-.form-group label {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #ffffff;
-
+  justify-content: space-around;
 }
 
 .dropdown-wrapper {
   position: relative;
+  border: 3px solid rgba(178, 18, 37, 1);
+
 }
 
-.dropdown-toggle {
+.dropdown-toggle-destination {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.8rem;
+  padding: 1rem;
+  width: 250px;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+  color: #333;
+  font-size: 1rem;
+
+
+}
+
+.dropdown-toggle {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  width: 220px;
   color: #333;
   font-size: 1rem;
 }
@@ -80,10 +83,9 @@
 }
 
 .date-picker {
-  border: 1px solid #ddd;
+  border: 3px solid rgba(178, 18, 37, 1);
   outline: none;
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 1.1rem;
   font-size: 0.9rem;
 }
 
@@ -99,7 +101,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
-  margin-top: 2.9%;
+  margin-top: 3px;
   margin-left: 1rem;
 }
 
