@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  height: 75vh;
+  height: 80vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -75,30 +75,47 @@
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 1.5rem;
+  border-radius: 10px 0px 0px 10px;
+  
 }
 
 .dropdown-wrapper {
   position: relative;
   width: 280px;
+  border-radius: 10px 0px 0px 10px;
+
   border: 3px solid rgba(178, 18, 37, 1);
+  border-radius: 20px 0px 0px 20px;
+
 }
 
 .dropdown-wrapper-guest {
   position: relative;
   width: 190px;
   border: 3px solid rgba(178, 18, 37, 1);
+
 }
 
 .dropdown-toggle-destination,
 .dropdown-toggle {
   padding: 1rem;
+  border-radius: 20px 0px 0px 20px;
   background-color: #fff;
   border: 1px solid #ddd;
   cursor: pointer;
   color: #333;
   font-size: 1rem;
 }
-
+.dropdown-toggle-destination,
+.dropdown-toggle-guest {
+  padding: 1rem;
+  
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  color: #333;
+  font-size: 1rem;
+}
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -144,6 +161,7 @@
   border: none;
   cursor: pointer;
   margin-bottom: 24px;
+  border-radius: 0px 20px 20px 0px;
 }
 
 
