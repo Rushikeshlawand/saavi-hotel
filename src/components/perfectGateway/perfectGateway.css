@@ -21,40 +21,45 @@
   color: rgba(169, 41, 56, 1);
 }
 
-.perfectGateway-content-wrapper {
+.movingContent-wrapper {
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
-.perfectGateway-content {
+.movingContent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 10px;
   margin-top: 4%;
   animation: scroll-left 30s linear infinite;
+  width: 200%;
 }
 
-.perfectGateway-card-image,
-.perfectGateway-card-text,
+.movingContent div {
+  flex: 0 0 auto;
+}
+.card-type-1,
+.card-type-2,
 .perfectGateway-luxury-room,
-.perfectGateway-easy-access,
-.perfectGateway-card-type4 {
+.card-type-3,
+.card-type-4 {
   flex: 0 0 auto;
   width: 300px;
 }
 
-.perfectGateway-card-image {
+.card-type-1 {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  width: 35%;
+  width: 500px;
   height: 10%;
 }
 
-.perfectGateway-card-image img {
+.card-type-1 img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -76,13 +81,15 @@
   letter-spacing: 0.6rem;
 }
 
-.perfectGateway-card-text {
+.card-type-2 {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 6px 1px rgba(178, 18, 37, 1);
+
 }
 
 .perfectGateway-luxury-room {
@@ -92,8 +99,7 @@
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  width: 24%;
-
+  width: 340px;
 }
 
 .perfectGateway-luxury-room .perfectGateway-card-content {
@@ -115,66 +121,64 @@
   line-height: 1.1;
 }
 
-.perfectGateway-easy-access {
-  width: 33%;
+.card-type-3 {
+  width: 530px;
   height: 10%;
   border: 1px solid rgb(189, 188, 188);
-  padding: 1%;
+  padding: 15px;
   border-radius: 15px;
   text-align: left;
   background-color: white;
   box-shadow: 0px 6px 1px rgba(178, 18, 37, 1);
 }
 
-.perfectGateway-easy-accessInner {
+.card-type-3Inner {
   border: 1px solid black;
   padding: 6%;
   border-radius: 15px;
 }
 
-.perfectGateway-easy-access h2 {
+.card-type-3 h2 {
   color: rgba(178, 18, 37, 1);
   margin-bottom: 7%;
   font-size: 1.3em;
 }
 
-.perfectGateway-easy-access p {
+.card-type-3 p {
   color: #777;
 }
 
 .TastyFoods {
   margin-top: 3%;
-  width: 25%;
+  width: 350px;
 }
 
 .luxuaryRoom {
   height: 15%;
 }
 
-.perfectGateway-card-type4 {
-  width: 25%;
+.card-type-4 {
+  width: 450px;
   border: 1px solid rgb(179, 172, 172);
   border-radius: 15px;
-  height: 15%;
-  padding: 1%;
+  padding: 15px;
+  
 }
 
-.perfectGateway-card-type4-inner {
-  padding: 9%;
+.card-type-4-inner {
+  padding: 6%;
   border: 1px solid black;
   border-radius: 15px;
   text-align: left;
-  
-
 }
 
-.perfectGateway-card-type4-inner h2 {
+.card-type-4-inner h2 {
   margin-bottom: 8%;
   color: #b71c1c;
   font-size: 1.3rem;
 }
 
-.perfectGateway-card-type4-inner p {
+.card-type-4-inner p {
   color: #777;
 }
 

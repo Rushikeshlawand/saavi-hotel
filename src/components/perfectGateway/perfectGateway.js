@@ -10,18 +10,14 @@ function PerfectGateway () {
         <h1>Your Perfect Getaway</h1>
         <p>Experience the Best of Nature and Luxury</p>
       </header>
-      <div className='perfectGateway-content-wrapper'>
-        <div className='perfectGateway-content'>
+      <div className='movingContent-wrapper'>
+        <div className='movingContent'>
           {/* Original Cards */}
-          <div className='perfectGateway-card-image'>
-            <img
-              src={Nature}
-              alt='Nature'
-              className='perfectGateway-card-image'
-            />
+          <div className='card-type-1'>
+            <img src={Nature} alt='Nature' className='card-type-1' />
             <div className='perfectGateway-card-title'>Nature</div>
           </div>
-          <div className='perfectGateway-card-text perfectGateway-luxury-room'>
+          <div className='card-type-2 perfectGateway-luxury-room'>
             <div className='perfectGateway-card-content'>
               <h2>Cozy Comfort, Modern Convenience</h2>
               <p>
@@ -31,16 +27,12 @@ function PerfectGateway () {
               </p>
             </div>
           </div>
-          <div className='perfectGateway-card-image luxuaryRoom'>
-            <img
-              src={LuxuaryRoom}
-              alt='Luxuary Room'
-              className='perfectGateway-card-image'
-            />
+          <div className='card-type-1 luxuaryRoom'>
+            <img src={LuxuaryRoom} alt='Luxuary Room' className='card-type-1' />
             <div className='perfectGateway-card-title'>Luxuary Room</div>
           </div>
-          <div className='perfectGateway-easy-access'>
-            <div className='perfectGateway-easy-accessInner'>
+          <div className='card-type-3'>
+            <div className='card-type-3Inner'>
               <h2>Easy Access, Stunning Views</h2>
               <p>
                 Easy access to visit stunning Jalori Pass, located in Kullu
@@ -49,36 +41,35 @@ function PerfectGateway () {
               </p>
             </div>
           </div>
-          <div className='perfectGateway-card-image TastyFoods'>
-            <img
-              src={TastyFood}
-              alt='Tasty Foods'
-              className='perfectGateway-card-image'
-            />
+          <div className='card-type-1 TastyFoods'>
+            <img src={TastyFood} alt='Tasty Foods' className='card-type-1' />
             <div className='perfectGateway-card-title'>Tasty Foods</div>
           </div>
-          <div className='perfectGateway-card-type4'>
-            <div className='perfectGateway-card-type4-inner'>
+          <div className='card-type-4'>
+            <div className='card-type-4-inner'>
               <h2>Culinary Delights</h2>
               <p>
                 Indulge your senses with a culinary journey that celebrates
                 local flavors and fresh ingredients. Our menu boasts a diverse
                 range of dishes, from traditional favorites to innovative
-                creations.
+                creations.Indulge your senses with a culinary journey that celebrates
+                local flavors and fresh ingredients. 
+                Indulge your senses with a culinary journey that celebrates
+                local flavors and fresh ingredients. 
               </p>
             </div>
           </div>
 
           {/* Duplicate Cards */}
-          {/* <div className='perfectGateway-card-image'>
+          <div className='card-type-1'>
             <img
               src={Nature}
               alt='Nature'
-              className='perfectGateway-card-image'
+              className='card-type-1'
             />
-            <div className='perfectGateway-card-title'>Nature</div>
-          </div> */}
-          {/* <div className='perfectGateway-card-text perfectGateway-luxury-room'>
+            <div className='perfectGateway-card-title'>Piece</div>
+          </div>
+          <div className='card-type-2 perfectGateway-luxury-room'>
             <div className='perfectGateway-card-content'>
               <h2>Cozy Comfort, Modern Convenience</h2>
               <p>
@@ -87,15 +78,34 @@ function PerfectGateway () {
                 great outdoors inside.
               </p>
             </div>
-          </div> */}
-          {/* <div className='perfectGateway-card-image luxuaryRoom'>
+          </div>
+          <div className='card-type-1 luxuaryRoom'>
             <img
               src={LuxuaryRoom}
               alt='Luxuary Room'
-              className='perfectGateway-card-image'
+              className='card-type-1'
             />
-            <div className='perfectGateway-card-title'>Luxuary Room</div>
-          </div> */}
+            <div className='perfectGateway-card-title'>Hotel's Room</div>
+          </div>
+          
+          <div className='card-type-1'>
+            <img src={Nature} alt='Nature' className='card-type-1' />
+            <div className='perfectGateway-card-title'>Chill</div>
+          </div>
+          <div className='card-type-2 perfectGateway-luxury-room'>
+            <div className='perfectGateway-card-content'>
+              <h2>Cozy Comfort, Modern Convenience</h2>
+              <p>
+                The interiors blend seamless comfort with modern amenities,
+                infusing Native influences to bring the natural beauty of the
+                great outdoors inside.
+              </p>
+            </div>
+          </div>
+          <div className='card-type-1 TastyFoods'>
+            <img src={TastyFood} alt='Tasty Foods' className='card-type-1' />
+            <div className='perfectGateway-card-title'> Foods</div>
+          </div>
         </div>
       </div>
     </div>
