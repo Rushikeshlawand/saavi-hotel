@@ -1,105 +1,66 @@
-import React, { useState, useEffect } from 'react'
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaYoutube,
-  FaGoogle,
-  FaInstagram,
-  FaPinterest
-} from 'react-icons/fa'
-import { FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
-import logo from '../../assets/logo.png'
-import './footer.css'
+// Footer.js
+import React from "react";
+import "./footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle, faEye, faBriefcase, faImages } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth)
-    window.addEventListener('resize', handleResize)
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   return (
-    <footer className='footer-container'>
-      <div
-        className='footer-content'
-        style={{
-          justifyContent: windowWidth < 768 ? 'center' : 'space-between',
-          flexDirection: windowWidth < 768 ? 'column' : 'row'
-        }}
-      >
-        {/* Left Side: Logo and Hotel Name */}
-        <div className='footer-left'>
-          <img src={logo} alt='Saavi Hotels' className='footer-logo' />
-          <h3 className='footer-title'>Saavi Hotels</h3>
-        </div>
+    <footer className="footer">
+      <div className="footer-section">
+        <h4>ABOUT US </h4>
+        <p>
+          Saavi Hotels is a chain of boutique hotels and a subsidiary of Saavi
+          Events and Entertainment Pvt. Ltd headquartered at Gurgaon,
+          Incorporated by the founder himself, Mr. Deepak Dangi. The company is
+          a part of the PV Group, one of India’s growing business conglomerates.
+        </p>
+      </div>
 
-        {/* Right Side: Map Icon, Address, Phone Number, and Social Media */}
-        <div className='footer-right'>
-          <div className='footer-info'>
-            <FaMapMarkerAlt className='footer-icon' />
-            <p>Gorem ipsum dolor sit amet, consetetur adipiscing elit.</p>
-          </div>
+      <div className="footer-section">
+        <h4>HEADQUARTER </h4>
+        <p>
+          The Saavi Hotel <br />
+          1482, Huda Colony, Sector 46, <br />
+          Gurugram, Haryana 122003
+        </p>
+      </div>
 
-          <div className='footer-info'>
-            <FaPhoneAlt className='footer-icon' />
-            <p>(123)456-7890</p>
-          </div>
+      <div className="footer-section">
+        <h4>IMPORTANT LINKS </h4>
+        <ul>
+          <li>
+            <FontAwesomeIcon icon={faInfoCircle} className="icon-link" /> About Us
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faEye} className="icon-link" /> Vision
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faBriefcase} className="icon-link" /> Career
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faImages} className="icon-link" /> Gallery
+          </li>
+        </ul>
+      </div>
 
-          <div className='footer-social'>
-            <p className='footer-social-title'>Social Media</p>
-            <a
-              href='https://facebook.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaFacebook className='social-icon' />
-            </a>
-            <a
-              href='https://twitter.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaTwitter className='social-icon' />
-            </a>
-            <a
-              href='https://linkedin.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaLinkedin className='social-icon' />
-            </a>
-            <a
-              href='https://youtube.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaYoutube className='social-icon' />
-            </a>
-            <a
-              href='https://google.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaInstagram className='social-icon' />
-            </a>
-            <a
-              href='https://instagram.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaGoogle className='social-icon' />
-            </a>
-            <FaPinterest className='social-icon' />
-            
-          </div>
+      <div className="footer-section">
+        <h4>FOLLOW US ONLINE </h4>
+        <div className="social-icons">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="icon">
+            <FontAwesomeIcon icon={faFacebookF} />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="icon">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="icon">
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
