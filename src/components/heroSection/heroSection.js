@@ -15,7 +15,7 @@ const HeroSectionWithSearch = () => {
   const [destinationDropdownVisible, setDestinationDropdownVisible] =
     useState(false)
   const [peopleDropdownVisible, setPeopleDropdownVisible] = useState(false)
-  const [arrivalDate, setArrivalDate] = useState(new Date())
+  const [arrivalDate, setArrivalDate] = useState(null)
   const [departureDate, setDepartureDate] = useState(null)
   const [adultNumber, setAdultNumber] = useState(0)
   const [childNumber, setChildNumber] = useState(0)
