@@ -24,12 +24,12 @@
 }
 
 .ourStory-title {
-  font-size: 2.5rem;
+  font-size: 26px;
   color: #333;
 }
 
 .ourStory-subtitle {
-  font-size: 1.2rem;
+  font-size: 17px;
   color: #c3002f;
   margin-top: 0.9%;
 }
@@ -58,8 +58,7 @@
   line-height: 1.8;
   color: #000000;
   margin-bottom: 20px;
-  font-size: 1.1rem;
-
+  font-size: 16px;
 }
 
 .ourStory-button {
