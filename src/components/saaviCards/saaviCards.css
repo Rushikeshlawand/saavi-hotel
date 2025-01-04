@@ -39,13 +39,13 @@
 
 .saavi-card-title {
   color: rgba(178, 18, 37, 1);
-  font-size: 1.6rem;
+  font-size: 22px;
   margin-bottom: 15px;
   margin-top: 4%;
 }
 
 .saavi-card-description {
-  font-size: 1.2rem;
+  font-size: 16px;
   flex-grow: 1;
 }
 
@@ -55,8 +55,8 @@
   text-decoration: underline;
   align-self: flex-start;
   margin-top: auto;
-
   margin-bottom: 20%;
+  font-size: 16px;
 }
 
 .saavi-card-image {
