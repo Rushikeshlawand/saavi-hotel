@@ -1,6 +1,6 @@
 .ourStory {
   padding: 40px;
-  margin-top: 5%;
+  margin-top: 100px;
   font-family: Arial, sans-serif;
   margin-left: 3%;
 }
@@ -9,7 +9,7 @@
   text-align: left;
   position: relative;
   padding-left: 30px;
-
+max-width: 30%;
 }
 
 .ourStory-header::before {
@@ -31,7 +31,7 @@
 .ourStory-subtitle {
   font-size: 17px;
   color: #c3002f;
-  margin-top: 0.9%;
+  margin-top: 9px;
 }
 
 .ourStory-content {
