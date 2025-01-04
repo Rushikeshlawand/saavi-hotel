@@ -2,7 +2,7 @@
   position: relative; /* Enables positioning for child elements */
   text-align: center;
   color: black;
-  margin-top: 7%;
+  margin-top: 6%;
 }
 
 .whyChooseSaavi-header {
@@ -12,10 +12,11 @@
 .whyChooseSaavi-title {
   font-size: 3rem;
   margin-bottom: 10px;
+  font-size: 26px;
 }
 
 .whyChooseSaavi-subtitle {
-  font-size: 1.3rem;
+  font-size: 16px;
   color: rgba(169, 41, 56, 1);
 }
 
@@ -53,17 +54,18 @@
   width: 100%;
   border-radius: 10px;
   margin-bottom: 15px;
+  
 }
 
 .whyChooseSaavi-featureTitle {
   color: #c3002f;
-  font-size: 1.5rem;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
 .whyChooseSaavi-featureDescription {
   color: #555;
-  font-size: 1.1rem;
+  font-size: 14px;
 }
 
 /* Background Image */

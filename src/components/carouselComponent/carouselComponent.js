@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './carouselComponent.css';
-import Image from '../../assets/carouselData/image.png';
-import Image1 from '../../assets/carouselData/image1.png';
-import Image2 from '../../assets/carouselData/image2.png';
+// import Image from '../../assets/carouselData/image.png';
+// import Image1 from '../../assets/carouselData/image1.png';
+// import Image2 from '../../assets/carouselData/image2.png';
 import Hotel1 from '../../assets/carouselData/hotel1.jpg'
 import Hotel2 from '../../assets/carouselData/hotel2.jpg'
 import Hotel3 from '../../assets/carouselData/hotel3.jpg'
@@ -35,7 +35,7 @@ const carouselData = [
   },
   {
     id: 4,
-    image: Hotel4,
+    image: Hotel8,
     title: 'Saavi Hotel Sector 46',
     description: 'Experience the vibrant city life with our centrally located hotel. Great for business trips and city explorers.',
   },
@@ -59,7 +59,7 @@ const carouselData = [
   },
   {
     id: 8,
-    image: Hotel8,
+    image: Hotel4,
     title: 'The Oyster Pearl By Saavi Hotel',
     description: 'Discover downtown luxury with easy access to landmarks. Perfect for shopaholics and city adventurers.',
   },

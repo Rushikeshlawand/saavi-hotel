@@ -18,7 +18,7 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <CarouselComponent />
-      <BookButton />
+      {/* <BookButton /> */}
       <div className='whyChooseSaavi'>
         <WhyChooseSaavi />
       </div>
