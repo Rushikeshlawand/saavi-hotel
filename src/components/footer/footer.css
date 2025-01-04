@@ -6,6 +6,7 @@
     justify-content: center;
     gap: 30px;
     padding: 80px 100px;
+    padding-left: 150px;
 }
 
 .footer-section {
@@ -13,16 +14,21 @@
 }
 
 .footer-section h4 {
-    color: #ff9900;
+    color: rgba(178, 18, 37, 1);
     font-size: 16px;
     margin-bottom: 10px;
 }
 
+.footer-section p {
+    font-weight: 100;
+    /* Adjust to your desired weight */
+}
+
 .footer-section p,
 .footer-section ul {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.6;
-    font-weight: 100;
+
 }
 
 .footer-section ul {
@@ -65,36 +71,37 @@
 .footer-section ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-section ul li {
+}
+
+.footer-section ul li {
     position: relative;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1rem;
+    font-size: 13px;
     color: #fff;
     cursor: pointer;
-    
-  }
-  
-  .footer-section ul li:hover {
-    color:white; /* Change text color on hover */
-  }
-  
-  .footer-section ul li::after {
+
+}
+
+.footer-section ul li:hover {
+    color: white;
+    /* Change text color on hover */
+}
+
+.footer-section ul li::after {
     content: "";
     position: absolute;
-    bottom: -3px;
+    bottom: -1px;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: rgba(178, 18, 37, 1);
-    transition: width 0.3s ease-in-out;
-  }
-  
-  .footer-section ul li:hover::after {
-    width: 40%; /* Animate underline from left to right */
-  }
-  
+    background-color: rgb(116, 113, 114);
+    transition: width 0.7s ease-in-out;
+}
+
+.footer-section ul li:hover::after {
+    width: 30%;
+    /* Animate underline from left to right */
+}

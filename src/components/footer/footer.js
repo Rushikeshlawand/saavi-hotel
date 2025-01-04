@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-section">
-        <h4>ABOUT US </h4>
+        <h4>About Us </h4>
         <p>
           Saavi Hotels is a chain of boutique hotels and a subsidiary of Saavi
           Events and Entertainment Pvt. Ltd headquartered at Gurgaon,
@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-section">
-        <h4>HEADQUARTER </h4>
+        <h4>Headquarter</h4>
         <p>
           The Saavi Hotel <br />
           1482, Huda Colony, Sector 46, <br />
@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-section">
-        <h4>IMPORTANT LINKS </h4>
+        <h4>Important Links </h4>
         <ul>
           <li>
             <FontAwesomeIcon icon={faInfoCircle} className="icon-link" /> About Us
@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-section">
-        <h4>FOLLOW US ONLINE </h4>
+        <h4>Follow Us Online </h4>
         <div className="social-icons">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="icon">
             <FontAwesomeIcon icon={faFacebookF} />
