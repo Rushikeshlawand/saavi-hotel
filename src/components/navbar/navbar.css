@@ -12,7 +12,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  
+
 }
 
 .logo {
@@ -23,17 +23,20 @@
   flex-direction: column;
   justify-content: flex-start;
   flex-grow: 1;
-  width:50px;
+  width: 50px;
   line-height: 1;
-  
+
 }
-.logo h1{
+
+.logo h1 {
   letter-spacing: 5px;
 
 }
+
 .logotext {
-font-size: 12px
+  font-size: 12px
 }
+
 .nav-links {
   display: flex;
   list-style: none;

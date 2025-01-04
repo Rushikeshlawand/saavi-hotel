@@ -124,7 +124,7 @@ const HeroSectionWithSearch = () => {
                   destinationDropdownVisible ? 'show' : ''
                 }`}
               >
-                {['New York', 'Paris', 'Tokyo', 'Sydney'].map(destination => (
+                {['Shimala', 'Huda', '', 'Jibhi'].map(destination => (
                   <div
                     key={destination}
                     className='dropdown-item'
