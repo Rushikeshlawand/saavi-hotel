@@ -32,14 +32,14 @@ const carouselData = [
     image: Hotel3,
     title: 'Saavi Hotel Gold Course',
     description:
-      'Stay amidst the tranquil mountains. Ideal for nature lovers and hikers. Breathe fresh air and rejuvenate your soul.'
+      'Stay amidst the tranquil mountains. Ideal for nature lovers and hikers.'
   },
   {
     id: 4,
     image: Hotel8,
     title: 'Saavi Hotel Sector 46',
     description:
-      'Experience the vibrant city life with our centrally located hotel. Great for business trips and city explorers.'
+      'Experience the vibrant city life with our centrally located hotel.'
   },
   {
     id: 5,
@@ -60,14 +60,14 @@ const carouselData = [
     image: Hotel7,
     title: 'Saavi Hotel Huda City Centre',
     description:
-      'Escape to the peaceful countryside. Enjoy farm-to-table dining and serene landscapes. Great for family vacations.'
+      'Escape to the peaceful countryside. Enjoy farm-to-table dining and serene landscapes.'
   },
   {
     id: 8,
     image: Hotel4,
     title: 'The Oyster Pearl By Saavi Hotel',
     description:
-      'Discover downtown luxury with easy access to landmarks. Perfect for shopaholics and city adventurers.'
+      'Discover downtown luxury with easy access to landmarks.'
   }
 ]
 
@@ -88,7 +88,7 @@ const CarouselComponent = () => {
 
   return (
     <div className='backgroundImg'>
-      <div className='title'>
+      <div className='wholeComponent'>
         <h2>Experience Saavi Hospitality</h2>
         <div className='carouselContainer'>
           <button className='carouselButton left' onClick={handlePrev}>
