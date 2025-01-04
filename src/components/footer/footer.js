@@ -34,13 +34,13 @@ const Footer = () => {
             <FontAwesomeIcon icon={faInfoCircle} className="icon-link" /> About Us
           </li>
           <li>
-            <FontAwesomeIcon icon={faEye} className="icon-link" /> Vision
+            <FontAwesomeIcon icon={faEye} className="icon-link" /> Our Hotels
           </li>
           <li>
-            <FontAwesomeIcon icon={faBriefcase} className="icon-link" /> Career
+            <FontAwesomeIcon icon={faBriefcase} className="icon-link" /> Offers & Packages
           </li>
           <li>
-            <FontAwesomeIcon icon={faImages} className="icon-link" /> Gallery
+            <FontAwesomeIcon icon={faImages} className="icon-link" /> Contact Us 
           </li>
         </ul>
       </div>

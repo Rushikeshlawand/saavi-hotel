@@ -6,30 +6,32 @@
 }
 
 .saavi-cards-container {
-  padding: 50px;
+  display: flex;
+  justify-content: center;
   margin-top: 6%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .saavi-cards {
+  max-width: 90%;
   display: flex;
-  flex-wrap: wrap; /* Wrap cards on smaller screens */
-  justify-content: center; /* Center cards */
-  gap: 20px; /* Adjusted gap for better spacing */
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .saavi-card {
   position: relative;
-  flex: 1 1 300px; /* Responsive card width (min 300px) */
-  max-width: 30%; /* Ensure cards don’t exceed max width */
-  height: 430px;
+  flex: 1 1 300px;
+  /* Responsive card width (min 300px) */
+  max-width: 30%;
+  /* Ensure cards don’t exceed max width */
+  min-height: 330px;
   border-radius: 24px;
   border: 1px solid #ddd;
-  padding:3.5%;
+  padding: 1.5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -63,7 +65,8 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  width: 130px; /* Reduced size for better fit */
+  width: 130px;
+  /* Reduced size for better fit */
   height: auto;
   object-fit: cover;
 }
@@ -76,7 +79,7 @@
   background-position: center;
   margin: 0;
   padding: 0;
-  
+
   z-index: 1;
   margin-top: 8%;
 }
