@@ -11,6 +11,7 @@ import PerfectGateway from '../../src/components/perfectGateway/perfectGateway'
 import ExperienceUnforgettable from '../../src/components/experienceUnforgettable/experienceUnforgettable'
 import Guest from '../../src/components/guest/guest'
 import SaaviCards from '../components/saaviCards/saaviCards'
+import Facilities from '../components/ourFacilities/ourFacilities'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <div className='whyChooseSaavi'>
         <WhyChooseSaavi />
       </div>
+      <Facilities/>
       <div className='ourstorypage'>
         <div className='temp'>
           <OurStory />

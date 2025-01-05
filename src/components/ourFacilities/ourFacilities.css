@@ -1,0 +1,90 @@
+.carousel {
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 180px;
+}
+
+.facilititesHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
+.facilititesHeader h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.facilititesHeader p {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 17px;
+  color: #c3002f;
+}
+
+.carousel-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  /* Ensure overlay stays within the card */
+}
+
+.carousel-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black overlay with 50% opacity */
+  z-index: 1;
+  /* Ensure the overlay is beneath the content */
+}
+
+.carousel-card-content {
+  position: relative;
+  z-index: 2;
+  /* Ensure text appears above the overlay */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  /* Add text shadow for better readability */
+}
+
+.carousel-card-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff013c;
+  /* Gold color for the title */
+  text-transform: uppercase;
+  /* Optional: Make the title uppercase */
+  letter-spacing: 0.5px;
+  /* Add spacing between letters */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  /* Add shadow for better visibility */
+}
+
+.carousel-card-content p {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.2;
+  /* Add some spacing between lines */
+  color: #f0f0f0;
+  /* Light gray for the description */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  /* Shadow for better contrast */
+  margin: 0;
+  padding: 0 50px;
+  /* Add padding for better readability */
+}
