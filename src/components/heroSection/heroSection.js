@@ -2,12 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import './heroSection.css'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import UncontrolledExample from '../homepage/corousel1'
 
 const HeroSectionWithSearch = () => {
   const images = [
-    require('../../assets/homepage/homapage7.png'),
-    require('../../assets/homepage/homapage7.png'),
-    require('../../assets/homepage/homepage6.png')
+    require('../../assets/homepage/7.png'),
+    require('../../assets/homepage/8.png'),
+    require('../../assets/homepage/9.png')
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -102,7 +103,7 @@ const HeroSectionWithSearch = () => {
       ))}
       <div className='searchform'>
         <div className='hero-content'>
-          <h1>Experience the Saavi Difference</h1>
+          {/* <h1>Experience the Saavi Difference</h1> */}
         </div>
         <form className='search-form'>
           {/* Destination Dropdown */}
@@ -230,6 +231,8 @@ const HeroSectionWithSearch = () => {
           </button>
         </form>
       </div>
+      {/* <UncontrolledExample/> */}
+
     </section>
   )
 }
