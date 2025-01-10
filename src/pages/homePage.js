@@ -17,6 +17,7 @@ const App = () => {
   return (
     <div className='bg'>
       <Navbar />
+      
       <HeroSection />
       <CarouselComponent />
       {/* <BookButton /> */}

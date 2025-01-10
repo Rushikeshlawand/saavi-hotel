@@ -4,9 +4,6 @@ import './carouselComponent.css'
 // import Image1 from '../../assets/carouselData/image1.png';
 // import Image2 from '../../assets/carouselData/image2.png';
 import Hotel1 from '../../assets/carouselData/hotel1.jpg'
-import Hotel2 from '../../assets/carouselData/hotel2.jpg'
-import Hotel3 from '../../assets/carouselData/hotel3.jpg'
-import Hotel4 from '../../assets/carouselData/hotel4.jpg'
 import Hotel5 from '../../assets/carouselData/hotel5.jpg'
 import Hotel6 from '../../assets/carouselData/hotel6.jpg'
 import Hotel7 from '../../assets/carouselData/hotel7.jpg'
@@ -15,56 +12,35 @@ import Hotel8 from '../../assets/carouselData/hotel8.jpg'
 const carouselData = [
   {
     id: 1,
-    image: Hotel1,
+    image:Hotel5 ,
     title: 'Saavi Hotel Jibhi',
     description:
       'Relax by the scenic riverfront. Perfect for romantic evenings and peaceful retreats.'
   },
   {
-    id: 2,
-    image: Hotel2,
-    title: 'Saavi Hotel Medicity',
-    description:
-      'Enjoy the serene beach view from our premium suites. Perfect for a relaxing getaway.'
-  },
-  {
-    id: 3,
-    image: Hotel3,
-    title: 'Saavi Hotel Gold Course',
-    description:
-      'Stay amidst the tranquil mountains. Ideal for nature lovers and hikers.'
-  },
-  {
-    id: 4,
-    image: Hotel8,
-    title: 'Saavi Hotel Sector 46',
-    description:
-      'Experience the vibrant city life with our centrally located hotel.'
-  },
-  {
     id: 5,
-    image: Hotel5,
+    image: Hotel1  ,
     title: 'The Sandalwood By Saavi Hotel',
     description:
       'Relax by the scenic riverfront. Perfect for romantic evenings and peaceful retreats.'
   },
   {
     id: 6,
-    image: Hotel6,
+    image: Hotel7,
     title: 'Saavi Hotel Sector 10',
     description:
       'Admire the breathtaking sky views from your room. Ideal for stargazers and dreamers.'
   },
   {
     id: 7,
-    image: Hotel7,
+    image: Hotel6,
     title: 'Saavi Hotel Huda City Centre',
     description:
       'Escape to the peaceful countryside. Enjoy farm-to-table dining and serene landscapes.'
   },
   {
     id: 8,
-    image: Hotel4,
+    image: Hotel8 ,
     title: 'The Oyster Pearl By Saavi Hotel',
     description:
       'Discover downtown luxury with easy access to landmarks.'

@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import './heroSection.css'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import UncontrolledExample from '../homepage/corousel1'
+// import UncontrolledExample from '../homepage/corousel1'
 
 const HeroSectionWithSearch = () => {
   const images = [
-    require('../../assets/homepage/7.png'),
-    require('../../assets/homepage/8.png'),
-    require('../../assets/homepage/9.png')
+    require('../../assets/homepage/1.png'),
+    require('../../assets/homepage/2.png'),
+    require('../../assets/homepage/3.png')
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -98,7 +98,7 @@ const HeroSectionWithSearch = () => {
           className={`hero-slide ${
             index === currentImageIndex ? 'active' : ''
           }`}
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${image})`,marginTop:`90px` }}
         />
       ))}
       <div className='searchform'>
@@ -125,7 +125,7 @@ const HeroSectionWithSearch = () => {
                   destinationDropdownVisible ? 'show' : ''
                 }`}
               >
-                {['Shimala', 'Huda', 'Gurugram', 'Jibhi','Goa'].map(destination => (
+                {['Shimala', 'Huda', 'Gurugram'].map(destination => (
                   <div
                     key={destination}
                     className='dropdown-item'
